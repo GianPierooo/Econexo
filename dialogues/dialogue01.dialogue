@@ -1,6 +1,6 @@
-
+~ start
 NX-01: Hola!
-NX-01: Mi nombre es Nexo.
-NX-01: hola [speed=0.3]  sdsdefsfesfesfes
-NX-01: . [wait=2] . [wait=2] . 
+	Mi nombre es Nexo.
+NX-01: soy el personaje principal [speed=0.3] y esta es mi historia
+NX-01: . [wait=1] . [wait=1] . 
 => END

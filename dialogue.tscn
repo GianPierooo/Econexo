@@ -1,10 +1,20 @@
 [gd_scene format=3 uid="uid://chdjyjxxqj4yo"]
 
 [ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba.jpg" id="1_kp46k"]
+[ext_resource type="Script" uid="uid://bmn1y8ndfouq6" path="res://dialogue.gd" id="1_oi3j2"]
+[ext_resource type="Texture2D" uid="uid://ps1gkkod5nsx" path="res://dialogues/pngwing.com.png" id="3_758ep"]
 
 [node name="Node2D" type="Node2D" unique_id=266820359]
+script = ExtResource("1_oi3j2")
 
 [node name="Prueba" type="Sprite2D" parent="." unique_id=821053348]
 position = Vector2(573, 319)
 scale = Vector2(1.5570652, 1.5748792)
 texture = ExtResource("1_kp46k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=191441454]
+
+[node name="Pngwing_com" type="Sprite2D" parent="." unique_id=51630884]
+position = Vector2(375.75, 411.14066)
+scale = Vector2(0.48055547, 0.4439474)
+texture = ExtResource("3_758ep")
