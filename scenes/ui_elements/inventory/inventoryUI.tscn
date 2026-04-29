@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://bx35f6sjehium"]
 
 [node name="Node2D" type="Node2D" unique_id=1926560388]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1452035173]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=367805156]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Panel" unique_id=1759007708]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel/ScrollContainer" unique_id=1122283940]
+layout_mode = 2
