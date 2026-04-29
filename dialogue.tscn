@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://chdjyjxxqj4yo"]
+
+[ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba.jpg" id="1_kp46k"]
+
+[node name="Node2D" type="Node2D" unique_id=266820359]
+
+[node name="Prueba" type="Sprite2D" parent="." unique_id=821053348]
+position = Vector2(573, 319)
+scale = Vector2(1.5570652, 1.5748792)
+texture = ExtResource("1_kp46k")
