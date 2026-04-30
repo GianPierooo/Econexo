@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ps1gkkod5nsx"
-path="res://.godot/imported/pngwing.com.png-8ab501c5c58f3437ffa9cf550004fe48.ctex"
+uid="uid://c4hixm2mk53a"
+path="res://.godot/imported/f1_family_photo.png-f976b40426ddf9e1d37611a19fa79804.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogues/pngwing.com.png"
-dest_files=["res://.godot/imported/pngwing.com.png-8ab501c5c58f3437ffa9cf550004fe48.ctex"]
+source_file="res://assets/art/level_01/fragments/f1_family_photo.png"
+dest_files=["res://.godot/imported/f1_family_photo.png-f976b40426ddf9e1d37611a19fa79804.ctex"]
 
 [params]
 
