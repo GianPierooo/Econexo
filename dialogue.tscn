@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba.jpg" id="1_kp46k"]
 [ext_resource type="Script" uid="uid://bmn1y8ndfouq6" path="res://dialogue.gd" id="1_oi3j2"]
 [ext_resource type="Texture2D" uid="uid://ps1gkkod5nsx" path="res://dialogues/pngwing.com.png" id="3_758ep"]
+[ext_resource type="PackedScene" uid="uid://bx35f6sjehium" path="res://scenes/ui_elements/inventory/inventoryUI.tscn" id="4_hoxo3"]
 
 [node name="Node2D" type="Node2D" unique_id=266820359]
 script = ExtResource("1_oi3j2")
@@ -18,3 +19,6 @@ texture = ExtResource("1_kp46k")
 position = Vector2(375.75, 411.14066)
 scale = Vector2(0.48055547, 0.4439474)
 texture = ExtResource("3_758ep")
+
+[node name="Node2D" parent="." unique_id=1926560388 instance=ExtResource("4_hoxo3")]
+position = Vector2(196, 518)
