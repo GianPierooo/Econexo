@@ -106,4 +106,4 @@ script = ExtResource("1_8f10k")
 texture = ExtResource("8_lq5y6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1830640926]
-position = Vector2(960, 532)
+position = Vector2(960, 540)
