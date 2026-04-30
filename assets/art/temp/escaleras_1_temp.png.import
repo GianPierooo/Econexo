@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bko7b34pevs2t"
-path="res://.godot/imported/house_room_bg.png-c8a70a13f9f33945c4868f7548af5b6a.ctex"
+uid="uid://b7p0ny68vcr8s"
+path="res://.godot/imported/escaleras_1_temp.png-883961ef65078e89bbc6b86d703e5116.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/temp/house_room_bg.png"
-dest_files=["res://.godot/imported/house_room_bg.png-c8a70a13f9f33945c4868f7548af5b6a.ctex"]
+source_file="res://assets/art/temp/escaleras_1_temp.png"
+dest_files=["res://.godot/imported/escaleras_1_temp.png-883961ef65078e89bbc6b86d703e5116.ctex"]
 
 [params]
 
