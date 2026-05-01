@@ -10,15 +10,20 @@ var fragment_data = null
 var is_empty: bool = true
 
 func _ready():
-	custom_minimum_size = Vector2(72, 72)
+	custom_minimum_size = Vector2(80, 80)
+	size = Vector2(80, 80)
 	
 	var style = StyleBoxFlat.new()
 	style.bg_color = Color(0.07, 0.09, 0.12)
 	style.border_color = Color(0.12, 0.18, 0.25)
+	style.corner_radius_top_left = 6
+	style.corner_radius_top_right = 6
+	style.corner_radius_bottom_left = 6
+	style.corner_radius_bottom_right = 6
 	style.set_border_width_all(1)
 	add_theme_stylebox_override("panel", style)
 	
-	label.anchor_top = 0.75
+	label.anchor_top = 0.78
 	label.anchor_bottom = 1.0
 	label.anchor_left = 0.0
 	label.anchor_right = 1.0
@@ -26,10 +31,18 @@ func _ready():
 	label.add_theme_font_size_override("font_size", 8)
 	label.add_theme_color_override("font_color", Color(0.65, 0.72, 0.8))
 	
+	# Imagen ocupa el 75% superior del slot
+	icon.anchor_left = 0.0
 	icon.anchor_right = 1.0
-	icon.anchor_bottom = 1.0
+	icon.anchor_top = 0.0
+	icon.anchor_bottom = 0.78
+	icon.offset_left = 4
+	icon.offset_right = -4
+	icon.offset_top = 4
+	icon.offset_bottom = 0
 	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	icon.clip_contents = true  # evita que se salga
 
 func setup(data):
 	is_empty = false
