@@ -1,5 +1,5 @@
 # InventoryUI.gd
-extends Node2D
+extends CanvasLayer
 
 @onready var slots_container = $Panel/HBoxContainer
 @onready var panel = $Panel
@@ -46,7 +46,7 @@ func _build_slots():
 
 func _on_fragmento_agregado(_fragmento):
 	_build_slots()
-	await get_tree().process_frame
+	await get_tree().process_frame  # esperar un frame para que los slots se instancien
 	for slot in slots_container.get_children():
 		if not slot.is_empty:
 			if not slot.slot_clicked.is_connected(_on_slot_clicked):

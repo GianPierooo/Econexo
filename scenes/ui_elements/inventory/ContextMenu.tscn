@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cvfkfnp4e72a"]
+
+[ext_resource type="Script" uid="uid://ctq56xuwto2dr" path="res://scripts/ui/Inventario/ContextMenu.gd" id="1_1kx63"]
+
+[node name="ContextMenu" type="Panel" unique_id=1072225566]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1kx63")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=602382683]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1817581630]
+layout_mode = 2
+
+[node name="BtnInspect" type="Button" parent="VBoxContainer" unique_id=1690607259]
+layout_mode = 2
+
+[node name="BtnScan" type="Button" parent="VBoxContainer" unique_id=568889716]
+layout_mode = 2
+
+[node name="BtnClose" type="Button" parent="VBoxContainer" unique_id=1320011177]
+layout_mode = 2
