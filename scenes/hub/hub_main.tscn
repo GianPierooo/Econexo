@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://chdjyjxxqj4yo"]
 
-[ext_resource type="Script" uid="uid://bmn1y8ndfouq6" path="res://scripts/ui/dialogue/hub_main_controller.gd" id="1_nmt6r"]
+[ext_resource type="Script" uid="uid://bmn1y8ndfouq6" path="res://scripts/hub/hub_main_controller.gd" id="1_nmt6r"]
 [ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="2_i727n"]
 [ext_resource type="Texture2D" uid="uid://ps1gkkod5nsx" path="res://assets/art/temp/pngwing.com.png" id="3_5vdkt"]
 [ext_resource type="Script" uid="uid://b3mjyk40ilf0i" path="res://scripts/interactables/interactable.gd" id="4_mv0rd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5vdkt"]
+radius = 153.0
+height = 362.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mv0rd"]
+radius = 166.01205
 
 [node name="HubMain" type="Node2D" unique_id=266820359]
 script = ExtResource("1_nmt6r")
@@ -13,12 +20,12 @@ scale = Vector2(2.6086955, 2.6086955)
 texture = ExtResource("2_i727n")
 centered = false
 
-[node name="PortalOff" type="Sprite2D" parent="." unique_id=1948514716]
+[node name="PortalOn" type="Sprite2D" parent="." unique_id=726269728]
+position = Vector2(59, 322)
 scale = Vector2(2.6086955, 2.6086955)
 centered = false
 
-[node name="PortalOn" type="Sprite2D" parent="." unique_id=726269728]
-position = Vector2(59, 322)
+[node name="PortalOff" type="Sprite2D" parent="." unique_id=1948514716]
 scale = Vector2(2.6086955, 2.6086955)
 centered = false
 
@@ -33,11 +40,15 @@ texture = ExtResource("3_5vdkt")
 script = ExtResource("4_mv0rd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Terminal" unique_id=1655299379]
+position = Vector2(1707, 480)
+shape = SubResource("CapsuleShape2D_5vdkt")
 
 [node name="Portal" type="Area2D" parent="Hotspots" unique_id=704001146]
 script = ExtResource("4_mv0rd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Portal" unique_id=306786587]
+position = Vector2(1599, 472)
+shape = SubResource("CircleShape2D_mv0rd")
 
 [node name="Audio" type="Node2D" parent="." unique_id=1500326741]
 
