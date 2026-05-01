@@ -1,57 +1,83 @@
-# InventoryUI.gd
+# p1_domestic_scene.gd
 extends Node2D
 
-@onready var slots_container = $Panel/HBoxContainer
-@onready var panel = $Panel
+@onready var chair = $Hotspots/ChairSpot
+@onready var plate = $Hotspots/PlateSpot
+@onready var radio = $Hotspots/RadioSpot
+@onready var frame = $Hotspots/FrameSpot
+@onready var family_fragment = $Fragments/FamilyPhotoFragment
+@onready var inspection_ui = $InspectionUI
+@onready var context_menu = $ContextMenu
+@onready var inventory_ui = $InventoryUI
 
-var item_slot_scene = preload("res://scenes/ui_elements/inventory/ItemSlot.tscn")
-const MAX_SLOTS = 6
+var state = {
+	"chair": false,
+	"plate": false,
+	"radio": false,
+	"frame": false
+}
+
+var f1_data = {
+	"nombre": "Foto Familiar",
+	"descripcion": "Una fotografía de una familia aparentemente normal.\nHay algo raro… no termino de entender qué.\nAlgo no coincide… pero no sé qué es.",
+	"imagen": ""
+}
 
 func _ready():
-	_setup_panel()
-	FragmentManager.fragmento_agregado.connect(_on_fragmento_agregado)
-	_build_slots()
-
-func _setup_panel():
-	panel.size = Vector2(1920, 110)
-	panel.position = Vector2(0, 970)
+	family_fragment.visible = false
 	
-	var style = StyleBoxFlat.new()
-	style.bg_color = Color(0.05, 0.07, 0.10, 0.92)
-	style.border_color = Color(0.0, 0.78, 1.0, 0.6)
-	style.border_width_top = 2
-	panel.add_theme_stylebox_override("panel", style)
+	chair.clicked.connect(_on_chair_correct)
+	plate.clicked.connect(_on_plate_correct)
+	radio.clicked.connect(_on_radio_correct)
+	frame.clicked.connect(_on_frame_correct)
+	family_fragment.clicked.connect(_on_family_fragment_clicked)
 	
-	slots_container.anchor_left = 0.0
-	slots_container.anchor_right = 1.0
-	slots_container.anchor_top = 0.0
-	slots_container.anchor_bottom = 1.0
-	slots_container.offset_left = 20
-	slots_container.offset_right = -20
-	slots_container.alignment = BoxContainer.ALIGNMENT_CENTER
-	slots_container.add_theme_constant_override("separation", 12)
+	# Conectar menú contextual
+	context_menu.on_inspect.connect(_on_inspect)
+	context_menu.on_scan.connect(_on_scan)
 
-func _build_slots():
-	for child in slots_container.get_children():
-		child.queue_free()
+func _on_chair_correct():
+	state["chair"] = true
+	check_puzzle()
+
+func _on_plate_correct():
+	state["plate"] = true
+	check_puzzle()
+
+func _on_radio_correct():
+	state["radio"] = true
+	check_puzzle()
+
+func _on_frame_correct():
+	state["frame"] = true
+	check_puzzle()
+
+func check_puzzle():
+	if state["chair"] and state["plate"] and state["radio"] and state["frame"]:
+		print("🎉 Puzzle completado")
+		_activar_fragmento_F1()
+
+func _activar_fragmento_F1():
+	family_fragment.visible = true
 	
-	for i in MAX_SLOTS:
-		var slot = item_slot_scene.instantiate()
-		slots_container.add_child(slot)
-		
-		if i < FragmentManager.inventario.size():
-			slot.setup(FragmentManager.inventario[i])
-		else:
-			slot.set_empty()
-
-func _on_fragmento_agregado(_fragmento):
-	_build_slots()
-	await get_tree().process_frame
-	for slot in slots_container.get_children():
+	# Agregar F1 al inventario
+	FragmentManager.add_fragment("F1_foto_familiar")
+	
+	# Conectar slots del inventario con el menú contextual
+	for slot in inventory_ui.slots_container.get_children():
 		if not slot.is_empty:
 			if not slot.slot_clicked.is_connected(_on_slot_clicked):
 				slot.slot_clicked.connect(_on_slot_clicked)
 
+func _on_family_fragment_clicked():
+	inspection_ui.mostrar(f1_data)
+
 func _on_slot_clicked(fragment_data):
 	var mouse_pos = get_viewport().get_mouse_position()
-	get_parent().get_node("ContextMenu").show_menu(fragment_data, mouse_pos)
+	context_menu.show_menu(fragment_data, mouse_pos)
+
+func _on_inspect(fragment_data):
+	inspection_ui.mostrar(fragment_data)
+
+func _on_scan(fragment_data):
+	print("Escaneando: ", fragment_data.id)
