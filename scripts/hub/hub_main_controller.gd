@@ -7,6 +7,7 @@ extends Node2D
 
 var intro_finished: bool = false
 var portal_activated: bool = false
+var dialogue_playing: bool = false
 
 func _ready() -> void:
 	await get_tree().process_frame
@@ -42,17 +43,27 @@ func enable_hub_interaction() -> void:
 	portal.input_pickable = true
 
 func _on_terminal_clicked() -> void:
-	if not intro_finished:
+	if not intro_finished or dialogue_playing:
 		return
-	activate_portal()
+	
+	if portal_activated:
+		# Ya fue activado antes, NX-0 recuerda
+		_play_dialogue("res://data/dialogues/hub/hub_terminal_done.dialogue")
+	else:
+		# Primera vez: diálogo y enciende el portal al terminar
+		await _play_dialogue("res://data/dialogues/hub/hub_terminal_activate.dialogue")
+		activate_portal()
 
 func _on_portal_clicked() -> void:
-	if not intro_finished:
+	if not intro_finished or dialogue_playing:
 		return
+	
 	if portal_activated:
+		# Portal encendido: el jugador entra
 		go_to_transition()
 	else:
-		print("Portal inactivo")
+		# Portal apagado: NX-0 indica que hay que usar el terminal
+		_play_dialogue("res://data/dialogues/hub/hub_portal_inactive.dialogue")
 
 func activate_portal() -> void:
 	if portal_activated:
@@ -60,7 +71,24 @@ func activate_portal() -> void:
 	portal_activated = true
 	portal_off.visible = false
 	portal_on.visible = true
-	print("Acceso habilitado")
 
 func go_to_transition() -> void:
 	get_tree().change_scene_to_file("res://scenes/hub/tp_transition.tscn")
+
+# Helper: reproduce un diálogo y bloquea interacción mientras dura
+func _play_dialogue(path: String) -> void:
+	var dialogue_resource = load(path)
+	if dialogue_resource == null:
+		push_error("No se encontró: " + path)
+		return
+	
+	dialogue_playing = true
+	terminal.input_pickable = false
+	portal.input_pickable = false
+	
+	var balloon = DialogueManager.show_example_dialogue_balloon(dialogue_resource, "start")
+	await balloon.tree_exited
+	
+	dialogue_playing = false
+	terminal.input_pickable = true
+	portal.input_pickable = true

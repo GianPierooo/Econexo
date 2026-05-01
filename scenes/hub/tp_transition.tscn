@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://duc6ekxmmd1n5"]
+
+[ext_resource type="Script" uid="uid://dn0oh38433x4d" path="res://scripts/hub/tp_transition.gd" id="1_ebfxv"]
+[ext_resource type="Texture2D" uid="uid://bwh6dpv54imqq" path="res://assets/art/temp/1920x1080.jpg" id="1_ewsyk"]
+
+[node name="TpTransition" type="Node2D" unique_id=831756831]
+script = ExtResource("1_ebfxv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1493820105]
+texture = ExtResource("1_ewsyk")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1084728346]
+position = Vector2(960, 540)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1554163600]
+
+[node name="FadeRect" type="ColorRect" parent="CanvasLayer" unique_id=1213314303]
+offset_right = 1932.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.003921569)

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://doq5m1o57bitp"
+path="res://.godot/imported/hub_tp_transition.dialogue-09cd1f131e32024df366ee31d57c68e7.tres"
+
+[deps]
+
+source_file="res://data/dialogues/hub/hub_tp_transition.dialogue"
+dest_files=["res://.godot/imported/hub_tp_transition.dialogue-09cd1f131e32024df366ee31d57c68e7.tres"]
+
+[params]
+
+defaults=true

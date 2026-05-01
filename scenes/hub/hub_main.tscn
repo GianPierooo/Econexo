@@ -2,15 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bmn1y8ndfouq6" path="res://scripts/hub/hub_main_controller.gd" id="1_nmt6r"]
 [ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="2_i727n"]
-[ext_resource type="Texture2D" uid="uid://ps1gkkod5nsx" path="res://assets/art/temp/pngwing.com.png" id="3_5vdkt"]
+[ext_resource type="Texture2D" uid="uid://bgkd26eny0d30" path="res://assets/art/temp/portal.png" id="3_5vdkt"]
 [ext_resource type="Script" uid="uid://b3mjyk40ilf0i" path="res://scripts/interactables/interactable.gd" id="4_mv0rd"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5vdkt"]
-radius = 153.0
-height = 362.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_mv0rd"]
-radius = 166.01205
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i727n"]
+size = Vector2(289, 295)
 
 [node name="HubMain" type="Node2D" unique_id=266820359]
 script = ExtResource("1_nmt6r")
@@ -21,34 +17,32 @@ texture = ExtResource("2_i727n")
 centered = false
 
 [node name="PortalOn" type="Sprite2D" parent="." unique_id=726269728]
-position = Vector2(59, 322)
-scale = Vector2(2.6086955, 2.6086955)
+position = Vector2(1085, 394)
+scale = Vector2(0.79722226, 0.78611106)
+texture = ExtResource("3_5vdkt")
 centered = false
 
 [node name="PortalOff" type="Sprite2D" parent="." unique_id=1948514716]
-scale = Vector2(2.6086955, 2.6086955)
-centered = false
-
-[node name="NX0" type="Sprite2D" parent="." unique_id=236807428]
-position = Vector2(440.25, 579.375)
-scale = Vector2(0.75500005, 0.75937814)
+position = Vector2(1092.0001, 380)
+scale = Vector2(0.78888863, 0.8472222)
 texture = ExtResource("3_5vdkt")
+centered = false
 
 [node name="Hotspots" type="Node2D" parent="." unique_id=1411531729]
 
 [node name="Terminal" type="Area2D" parent="Hotspots" unique_id=55126310]
 script = ExtResource("4_mv0rd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Terminal" unique_id=1655299379]
-position = Vector2(1707, 480)
-shape = SubResource("CapsuleShape2D_5vdkt")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Terminal" unique_id=1392173427]
+position = Vector2(1227, 549.25)
+shape = SubResource("RectangleShape2D_i727n")
 
 [node name="Portal" type="Area2D" parent="Hotspots" unique_id=704001146]
 script = ExtResource("4_mv0rd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Portal" unique_id=306786587]
-position = Vector2(1599, 472)
-shape = SubResource("CircleShape2D_mv0rd")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Portal" unique_id=1080141491]
+position = Vector2(1227, 531.5)
+shape = SubResource("RectangleShape2D_i727n")
 
 [node name="Audio" type="Node2D" parent="." unique_id=1500326741]
 

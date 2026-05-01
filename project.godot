@@ -45,7 +45,7 @@ Pausa={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://data/dialogues/hub/hub_intro.dialogue")
+locale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://data/dialogues/hub/hub_intro.dialogue", "res://data/dialogues/hub/hub_tp_transition.dialogue")
 <<<<<<<Updatedupstreamlocale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://dialogues/dialogue01.dialogue")
 
 [physics]
