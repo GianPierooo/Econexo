@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://r085fafan57i"]
+
+[ext_resource type="Script" uid="uid://d02ra023wfdq7" path="res://scenes/ui_elements/Menus/pause_menu.gd" id="1_tma0m"]
+[ext_resource type="Theme" uid="uid://bdbq87764tfjv" path="res://scenes/ui_elements/Menus/menu_theme.tres" id="2_vawrw"]
+[ext_resource type="PackedScene" uid="uid://x57sf44y5ryp" path="res://scenes/ui_elements/Menus/custom_button.tscn" id="3_tu5v0"]
+
+[node name="PauseMenu" type="Control" unique_id=991516730]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tma0m")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=255735439]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vawrw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=534885119]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1668362780]
+layout_mode = 2
+text = "JUEGO PAUSADO"
+
+[node name="Continuar" parent="MarginContainer/VBoxContainer" unique_id=1608218663 instance=ExtResource("3_tu5v0")]
+layout_mode = 2
+text = "Continuar"
+
+[node name="Volver al menú" parent="MarginContainer/VBoxContainer" unique_id=1519745003 instance=ExtResource("3_tu5v0")]
+layout_mode = 2
+text = "Volver al menú"
+
+[node name="Salir" parent="MarginContainer/VBoxContainer" unique_id=136216991 instance=ExtResource("3_tu5v0")]
+layout_mode = 2
+text = "Salir
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Volver al menú" to="." method="_on_volver_al_menú_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

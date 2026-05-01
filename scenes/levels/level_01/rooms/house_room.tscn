@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cvfkfnp4e72a" path="res://scenes/ui_elements/inventory/ContextMenu.tscn" id="9_oya81"]
 [ext_resource type="PackedScene" uid="uid://6awsbgkwtrqu" path="res://scenes/ui_elements/inventory/inventoryUI.tscn" id="10_berct"]
 [ext_resource type="PackedScene" uid="uid://dy0rqkylp5nhm" path="res://scenes/ui_elements/inventory/ItemSlot.tscn" id="11_lq5y6"]
+[ext_resource type="PackedScene" uid="uid://r085fafan57i" path="res://scenes/ui_elements/Menus/pause_menu.tscn" id="13_lq5y6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0oj5x"]
 radius = 113.0
@@ -122,3 +123,7 @@ script = ExtResource("9_berct")
 [node name="CanvasLayer" parent="." unique_id=1680009072 instance=ExtResource("10_berct")]
 
 [node name="ContextMenu" parent="." unique_id=1072225566 instance=ExtResource("9_oya81")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=686257706]
+
+[node name="PauseMenu" parent="CanvasLayer2" unique_id=991516730 instance=ExtResource("13_lq5y6")]
