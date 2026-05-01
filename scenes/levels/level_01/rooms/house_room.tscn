@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dnvyrapv8jl15" path="res://assets/art/level_01/props/radio.png" id="6_oya81"]
 [ext_resource type="Texture2D" uid="uid://clcshn7r55ph5" path="res://assets/art/level_01/props/frame.png" id="7_berct"]
 [ext_resource type="Texture2D" uid="uid://c4hixm2mk53a" path="res://assets/art/level_01/fragments/f1_family_photo.png" id="8_lq5y6"]
+[ext_resource type="Script" uid="uid://bpugtrrlmgj0t" path="res://scripts/ui/menu/pause.gd" id="9_berct"]
 [ext_resource type="PackedScene" uid="uid://cvfkfnp4e72a" path="res://scenes/ui_elements/inventory/ContextMenu.tscn" id="9_oya81"]
 [ext_resource type="PackedScene" uid="uid://6awsbgkwtrqu" path="res://scenes/ui_elements/inventory/inventoryUI.tscn" id="10_berct"]
 [ext_resource type="PackedScene" uid="uid://dy0rqkylp5nhm" path="res://scenes/ui_elements/inventory/ItemSlot.tscn" id="11_lq5y6"]
@@ -25,6 +26,7 @@ size = Vector2(171, 157)
 radius = 98.43272
 
 [node name="HouseRoom" type="Node2D" unique_id=2142720028]
+process_mode = 1
 script = ExtResource("1_5463v")
 
 [node name="BG" type="Sprite2D" parent="." unique_id=1518949839]
@@ -113,6 +115,7 @@ texture = ExtResource("8_lq5y6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1830640926]
 position = Vector2(960, 540)
+script = ExtResource("9_berct")
 
 [node name="Panel" parent="." unique_id=683763917 instance=ExtResource("11_lq5y6")]
 
