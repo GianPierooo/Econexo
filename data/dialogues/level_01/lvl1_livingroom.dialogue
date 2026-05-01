@@ -1,0 +1,39 @@
+~ start
+NX-0: Una vivienda...
+NX-0: Los objetos están fuera de lugar.
+NX-0: Debo reorganizarlos.
+=> END
+
+~ silla_placed
+NX-0: Está fuera de lugar...
+=> END
+
+~ plato_placed
+NX-0: Alguien lo movió.
+=> END
+
+~ radio_placed
+NX-0: Está apagada…
+=> END
+
+~ marco_placed
+NX-0: Está torcido.
+=> END
+
+~ puzzle_complete
+NX-0: Cómo debería ser.
+=> END
+
+~ f1_hint
+NX-0: Hay algo raro en ese marco...
+=> END
+
+~ f1_inspect
+NX-0: Hay algo raro…
+NX-0: No termino de entender qué.
+NX-0: Algo no coincide… pero no sé qué es.
+=> END
+
+~ f1_close
+NX-0: Tengo que seguir buscando…
+=> END

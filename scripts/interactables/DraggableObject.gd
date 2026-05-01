@@ -1,37 +1,37 @@
-# DraggableObject.gd
 extends Area2D
-
 signal clicked
+signal clicked_after_placed  # ← señal nueva para click después de colocar
 
-@export var snap_distance: float = 150.0
+@export var snap_distance: float = 500.0
 @export var target_path: NodePath
 
 var target_node: Node2D
 var dragging: bool = false
 var original_position: Vector2
 var offset: Vector2
+var is_placed: bool = false
 
 func _ready():
-	original_position = global_position
+	original_position = position
 	if target_path:
 		target_node = get_node(target_path)
 
-# Solo detecta el INICIO del arrastre (cuando el mouse está sobre el objeto)
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if is_placed:
+				# Ya colocado: emitir señal de click
+				clicked_after_placed.emit()
+				return
 			dragging = true
 			offset = global_position - get_global_mouse_position()
 			get_viewport().set_input_as_handled()
 
-# Detecta TODO lo demás globalmente (movimiento y soltar)
 func _input(event):
 	if not dragging:
 		return
-	
 	if event is InputEventMouseMotion:
 		global_position = get_global_mouse_position() + offset
-	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			dragging = false
@@ -39,17 +39,15 @@ func _input(event):
 
 func _check_snap():
 	if target_node == null:
-		print("ERROR: target_node es null, revisa el Target Path en el inspector")
+		push_error("target_node es null en: " + name)
 		return
-	
-	var distancia = global_position.distance_to(target_node.global_position)
-	print("Distancia al target: ", distancia)  # para debug
-	
+	var my_pos = position
+	var target_pos = target_node.position
+	var distancia = my_pos.distance_to(target_pos)
 	if distancia <= snap_distance:
-		global_position = target_node.global_position
-		emit_signal("clicked")
+		position = target_pos
+		is_placed = true
+		emit_signal("clicked")  # ← se emite al snapear
 		set_process(false)
-		print("✅ Objeto encajó!")
 	else:
-		global_position = original_position
-		print("❌ Muy lejos, volviendo. Distancia era: ", distancia)
+		position = original_position

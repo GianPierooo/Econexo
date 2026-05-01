@@ -54,4 +54,5 @@ func _on_fragmento_agregado(_fragmento):
 
 func _on_slot_clicked(fragment_data):
 	var mouse_pos = get_viewport().get_mouse_position()
-	get_parent().get_node("ContextMenu").show_menu(fragment_data, mouse_pos)
+	# get_parent().get_node("ContextMenu").show_menu(fragment_data, mouse_pos)
+	print("Slot clickeado: ", fragment_data["nombre"])

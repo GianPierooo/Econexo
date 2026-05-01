@@ -1,15 +1,98 @@
 [gd_scene format=3 uid="uid://3tmuprnlbtri"]
 
-[ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="1_njenk"]
+[ext_resource type="Script" uid="uid://x6kwukmxmhn6" path="res://scenes/levels/level_01/lvl_1_livingroom.gd" id="1_57i3f"]
+[ext_resource type="Texture2D" uid="uid://dong6fyvvcf5i" path="res://assets/art/temp/living_temp.png" id="1_njenk"]
+[ext_resource type="Texture2D" uid="uid://dkywl7h7hj17x" path="res://assets/art/level_01/props/chair.png" id="3_60wle"]
+[ext_resource type="Script" uid="uid://cujo24lr4ld2y" path="res://scripts/interactables/DraggableObject.gd" id="3_ty5l8"]
+[ext_resource type="Texture2D" uid="uid://dhvo61fg4d3tj" path="res://assets/art/level_01/props/plate.png" id="4_ty5l8"]
+[ext_resource type="Texture2D" uid="uid://clcshn7r55ph5" path="res://assets/art/level_01/props/frame.png" id="5_pvnrt"]
+[ext_resource type="Texture2D" uid="uid://dnvyrapv8jl15" path="res://assets/art/level_01/props/radio.png" id="6_lr0fv"]
 
-[node name="Lvl1Street01_tscn" type="Node2D" unique_id=111540482]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewkfm"]
+size = Vector2(178, 254)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvnrt"]
+size = Vector2(178, 163.5625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lr0fv"]
+size = Vector2(178, 163.5625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bouw7"]
+size = Vector2(178, 151)
+
+[node name="Lvl1Livingroom" type="Node2D" unique_id=111540482]
+script = ExtResource("1_57i3f")
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=1979578783]
-scale = Vector2(2.6086955, 2.6086955)
+scale = Vector2(1.0000001, 1)
 texture = ExtResource("1_njenk")
 centered = false
 
+[node name="Props" type="Node2D" parent="." unique_id=1185418538]
+
+[node name="Silla" type="Area2D" parent="Props" unique_id=2039131218]
+position = Vector2(1578, 936)
+script = ExtResource("3_ty5l8")
+target_path = NodePath("../TargetSilla")
+
+[node name="Silla" type="Sprite2D" parent="Props/Silla" unique_id=763703332]
+texture = ExtResource("3_60wle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Props/Silla" unique_id=1075665162]
+shape = SubResource("RectangleShape2D_ewkfm")
+
+[node name="Plato" type="Area2D" parent="Props" unique_id=1205921167]
+position = Vector2(847, 703)
+script = ExtResource("3_ty5l8")
+target_path = NodePath("../TargetPlato")
+
+[node name="Plate" type="Sprite2D" parent="Props/Plato" unique_id=1531218815]
+scale = Vector2(0.4485714, 0.49714285)
+texture = ExtResource("4_ty5l8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Props/Plato" unique_id=1387556934]
+shape = SubResource("RectangleShape2D_pvnrt")
+
+[node name="Marco" type="Area2D" parent="Props" unique_id=690635904]
+position = Vector2(414, 748)
+script = ExtResource("3_ty5l8")
+target_path = NodePath("../TargetMarco")
+
+[node name="Marco" type="Sprite2D" parent="Props/Marco" unique_id=208795517]
+texture = ExtResource("5_pvnrt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Props/Marco" unique_id=1086813256]
+shape = SubResource("RectangleShape2D_lr0fv")
+
+[node name="Radio" type="Area2D" parent="Props" unique_id=249966784]
+position = Vector2(1120, 618)
+script = ExtResource("3_ty5l8")
+target_path = NodePath("../TargetRadio")
+
+[node name="Radio" type="Sprite2D" parent="Props/Radio" unique_id=429385303]
+scale = Vector2(0.0808, 0.07340002)
+texture = ExtResource("6_lr0fv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Props/Radio" unique_id=1806216427]
+shape = SubResource("RectangleShape2D_bouw7")
+
+[node name="TargetSilla" type="Node2D" parent="Props" unique_id=1555660061]
+position = Vector2(1101, 731)
+
+[node name="TargetPlato" type="Node2D" parent="Props" unique_id=1087323974]
+position = Vector2(995, 655.00006)
+
+[node name="TargetRadio" type="Node2D" parent="Props" unique_id=692377380]
+position = Vector2(929.0001, 486)
+
+[node name="TargetMarco" type="Node2D" parent="Props" unique_id=1321657587]
+position = Vector2(183, 232.00002)
+
+[node name="Targets" type="Node2D" parent="." unique_id=1027918763]
+position = Vector2(1770, 285)
+
 [node name="Audio" type="Node2D" parent="." unique_id=862117648]
+metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=322176422]
 

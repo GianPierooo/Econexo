@@ -15,7 +15,7 @@ func _registrar_fragmentos():
 		"nombre": "Foto Familiar",
 		"tipo": "FOTOGRAFÍA",
 		"descripcion": "Una fotografía de una familia aparentemente normal.\nHay algo raro… no termino de entender qué.",
-		"imagen": ""
+		"imagen": "res://assets/art/level_01/fragments/f1_family_photo.png"
 	}
 	catalogo["F2_diario"] = {
 		"id": "F2_diario",
