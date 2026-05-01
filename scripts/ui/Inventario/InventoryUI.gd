@@ -4,7 +4,7 @@ extends CanvasLayer
 @onready var panel = $Panel
 
 var item_slot_scene = preload("res://scenes/ui_elements/inventory/ItemSlot.tscn")
-const MAX_SLOTS = 3
+const MAX_SLOTS = 5
 
 func _ready():
 	_setup_panel()
@@ -12,8 +12,8 @@ func _ready():
 	_build_slots()
 
 func _setup_panel():
-	panel.size = Vector2(360, 140)
-	panel.position = Vector2((1920 - 360) / 2, 16)
+	panel.size = Vector2(560, 140)
+	panel.position = Vector2((1920 - 560) / 2, 16)
 
 	var style = StyleBoxFlat.new()
 	style.bg_color = Color(0.05, 0.07, 0.10, 0.85)
