@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dnuconeub352r" path="res://scenes/levels/level_01/lvl_1_street_02.gd" id="1_dowhm"]
 [ext_resource type="Texture2D" uid="uid://dxqtssnfeoa3f" path="res://assets/images/calle_2_final.png" id="1_etspy"]
+[ext_resource type="AudioStream" uid="uid://dwj1rn26v4myk" path="res://assets/sounds/Music_Calle.wav" id="3_j2s2v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dowhm"]
 size = Vector2(513, 785)
@@ -45,3 +46,7 @@ shape = SubResource("RectangleShape2D_twbao")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1770054749]
 position = Vector2(960, 540)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=78649648]
+stream = ExtResource("3_j2s2v")
+autoplay = true

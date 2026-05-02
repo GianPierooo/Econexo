@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://crd360yeyx0qq" path="res://assets/images/calle_1_final.png" id="1_3o6tn"]
 [ext_resource type="PackedScene" uid="uid://cvsc2g2i62mgp" path="res://scenes/ui/arrows.tscn" id="2_8871d"]
+[ext_resource type="AudioStream" uid="uid://dwj1rn26v4myk" path="res://assets/sounds/Music_Calle.wav" id="3_kykbi"]
 
 [node name="Node2D" type="Node2D" unique_id=959687186]
 
@@ -11,6 +12,10 @@ texture = ExtResource("1_3o6tn")
 
 [node name="ArrowDerecha" parent="." unique_id=771298827 instance=ExtResource("2_8871d")]
 position = Vector2(441, 736)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1947644617]
+stream = ExtResource("3_kykbi")
+autoplay = true
 
 [connection signal="mouse_entered" from="ArrowDerecha" to="ArrowDerecha" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ArrowDerecha" to="ArrowDerecha" method="_on_mouse_exited"]
