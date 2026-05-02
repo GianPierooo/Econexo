@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cg4m61woyt215"]
+
+[ext_resource type="Texture2D" uid="uid://dxqtssnfeoa3f" path="res://assets/images/calle_2_final.png" id="1_etspy"]
+
+[node name="Node2D" type="Node2D" unique_id=959687186]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1463339961]
+position = Vector2(960, 540)
+texture = ExtResource("1_etspy")

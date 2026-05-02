@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cutqnpkkod61r" path="res://assets/images/titulo_ver.a_obj_1.png" id="3_wdn13"]
 [ext_resource type="Texture2D" uid="uid://bkpqsmdvfeqy8" path="res://assets/images/titulo_oficial_esquina_1.png" id="4_6pbhs"]
 [ext_resource type="FontFile" uid="uid://btl1p07kct4ye" path="res://assets/fonts/Gabriola.ttf" id="6_0onok"]
-[ext_resource type="AudioStream" uid="uid://ca2hsc6b1dfmy" path="res://assets/sounds/EcoNexo 1 menu reto.mp3" id="7_6pbhs"]
+[ext_resource type="AudioStream" uid="uid://c7xwcqu1px32u" path="res://assets/sounds/Menu_Retro.wav" id="7_7nr5q"]
 [ext_resource type="Texture2D" uid="uid://bwh6dpv54imqq" path="res://assets/art/temp/1920x1080.jpg" id="9_7nr5q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_om6d3"]
@@ -18,7 +18,7 @@ shader_parameter/shake_speed = 5.0
 shader_parameter/shake_block_size = 30.5
 shader_parameter/shake_color_rate = 0.01
 
-[node name="MainMenu" type="Control" unique_id=334767002]
+[node name="MainMenu2" type="Control" unique_id=334767002]
 process_mode = 2
 layout_mode = 3
 anchors_preset = 15
@@ -57,7 +57,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 4
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1989857697]
-stream = ExtResource("7_6pbhs")
+stream = ExtResource("7_7nr5q")
 autoplay = true
 
 [node name="Label" type="Label" parent="." unique_id=1771393475]

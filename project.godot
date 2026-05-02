@@ -21,6 +21,7 @@ DialogueManager="*uid://c3rodes2l3gxb"
 InventoryManager="*uid://gkaood7qec1a"
 <<<<<<<UpdatedupstreamInventoryManager="*uid://gkaood7qec1a"
 FragmentManager="*uid://v3arkw5t5m3t"
+TransitionManager="*uid://ddxud5u2xl8dw"
 
 [dialogue_manager]
 
