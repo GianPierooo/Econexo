@@ -1,12 +1,26 @@
 [gd_scene format=3 uid="uid://cg1hgn0d41vsd"]
 
-[ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="1_jkmd8"]
+[ext_resource type="Script" uid="uid://lcko4tyuwji4" path="res://scenes/levels/level_01/lvl_1_alley.gd" id="1_385wb"]
+[ext_resource type="Texture2D" uid="uid://df88nf350d3wf" path="res://assets/art/temp/callejon_temp.png" id="2_40c8t"]
+[ext_resource type="Texture2D" uid="uid://clcshn7r55ph5" path="res://assets/art/level_01/props/frame.png" id="3_xbc2m"]
+[ext_resource type="Texture2D" uid="uid://c4hixm2mk53a" path="res://assets/art/level_01/fragments/f1_family_photo.png" id="4_3ly35"]
+[ext_resource type="Texture2D" uid="uid://dkywl7h7hj17x" path="res://assets/art/level_01/props/chair.png" id="5_3ly35"]
+[ext_resource type="Texture2D" uid="uid://dnvyrapv8jl15" path="res://assets/art/level_01/props/radio.png" id="6_mm5f1"]
+[ext_resource type="Texture2D" uid="uid://dhvo61fg4d3tj" path="res://assets/art/level_01/props/plate.png" id="7_11qd7"]
 
-[node name="Lvl1Street01_tscn" type="Node2D" unique_id=111540482]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mm5f1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11qd7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etgmk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8isv"]
+
+[node name="Lvl1_alley" type="Node2D" unique_id=111540482]
+script = ExtResource("1_385wb")
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=2111414431]
-scale = Vector2(2.6086955, 2.6086955)
-texture = ExtResource("1_jkmd8")
+texture = ExtResource("2_40c8t")
 centered = false
 
 [node name="Audio" type="Node2D" parent="." unique_id=522856769]
@@ -15,3 +29,56 @@ centered = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=442321037]
 position = Vector2(960, 540)
+
+[node name="ParedVacia" type="Sprite2D" parent="." unique_id=1263752250]
+position = Vector2(1757.9999, 348)
+rotation = 0.07200752
+texture = ExtResource("3_xbc2m")
+
+[node name="ZonaEmsamblaje" type="Node2D" parent="." unique_id=294263357]
+
+[node name="PosterCompleto" type="Sprite2D" parent="ZonaEmsamblaje" unique_id=1558764564]
+visible = false
+texture = ExtResource("4_3ly35")
+
+[node name="Piezas" type="Node2D" parent="." unique_id=662665115]
+
+[node name="Pieza1" type="Area2D" parent="Piezas" unique_id=1512511299]
+position = Vector2(338, 369)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piezas/Pieza1" unique_id=1805428251]
+scale = Vector2(0.7138889, 0.6)
+texture = ExtResource("3_xbc2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piezas/Pieza1" unique_id=523212097]
+shape = SubResource("RectangleShape2D_mm5f1")
+
+[node name="Pieza2" type="Area2D" parent="Piezas" unique_id=120281886]
+position = Vector2(873, 407)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piezas/Pieza2" unique_id=1001211710]
+scale = Vector2(0.36666667, 0.49444443)
+texture = ExtResource("5_3ly35")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piezas/Pieza2" unique_id=72291171]
+shape = SubResource("RectangleShape2D_11qd7")
+
+[node name="Pieza3" type="Area2D" parent="Piezas" unique_id=540916361]
+position = Vector2(1236, 459)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piezas/Pieza3" unique_id=1298288713]
+scale = Vector2(0.0616, 0.0588)
+texture = ExtResource("6_mm5f1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piezas/Pieza3" unique_id=1837564103]
+shape = SubResource("RectangleShape2D_etgmk")
+
+[node name="Pieza4" type="Area2D" parent="Piezas" unique_id=1302051153]
+position = Vector2(1615, 701)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piezas/Pieza4" unique_id=2023668722]
+scale = Vector2(0.2847619, 0.27142859)
+texture = ExtResource("7_11qd7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piezas/Pieza4" unique_id=1660955493]
+shape = SubResource("RectangleShape2D_d8isv")
