@@ -22,7 +22,28 @@ func _registrar_fragmentos():
 		"nombre": "Diario Oculto",
 		"tipo": "DOCUMENTO",
 		"descripcion": "Habla de desapariciones. Las imágenes no coinciden entre sí.",
-		"imagen": ""
+		"imagen": "res://assets/art/level_01/fragments/f1_family_photo.png"
+	}
+	catalogo["F3_lista"] = {
+		"id": "F3_lista",
+		"nombre": "Lista del Edificio",
+		"tipo": "DOCUMENTO",
+		"descripcion": "Una lista de residentes. Algunos nombres están tachados... otros marcados con rojo.",
+		"imagen": "res://assets/art/level_01/fragments/f1_family_photo.png"
+	}
+	catalogo["F4_poster"] = {
+		"id": "F4_poster",
+		"nombre": "Poster de Videla",
+		"tipo": "OBJETO",
+		"descripcion": "Propaganda oficial. Alguien lo arrancó y lo tiró al contenedor.",
+		"imagen": "res://assets/art/level_01/fragments/f1_family_photo.png"
+	}
+	catalogo["F5_radio"] = {
+		"id": "F5_radio",
+		"nombre": "Voces de la Radio",
+		"tipo": "AUDIO",
+		"descripcion": "Detrás del discurso oficial... hay muchas voces. Nombres. Consignas.",
+		"imagen": "res://assets/art/level_01/fragments/f1_family_photo.png"
 	}
 
 func add_fragment(id: String):

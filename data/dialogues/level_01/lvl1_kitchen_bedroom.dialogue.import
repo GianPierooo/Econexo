@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b28iq56ek3r3c"
+path="res://.godot/imported/lvl1_kitchen_bedroom.dialogue-b355c261ccfcfa02641ff00ea6ccfcdf.tres"
+
+[deps]
+
+source_file="res://data/dialogues/level_01/lvl1_kitchen_bedroom.dialogue"
+dest_files=["res://.godot/imported/lvl1_kitchen_bedroom.dialogue-b355c261ccfcfa02641ff00ea6ccfcdf.tres"]
+
+[params]
+
+defaults=true

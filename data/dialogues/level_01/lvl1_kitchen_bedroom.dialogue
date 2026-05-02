@@ -1,0 +1,31 @@
+~ start
+NX-0: Otro espacio...
+NX-0: Algo pasó acá.
+NX-0: Tengo que buscar más.
+
+~ sin_f1
+NX-0: No encuentro nada relevante.
+NX-0: Quizás me falta algo.
+
+~ cajon_activado
+NX-0: Espera...
+NX-0: Hay algo en ese cajón.
+
+~ cajon_abierto
+NX-0: ¿Qué es esto?
+
+~ foto_bebe
+NX-0: Es el mismo bebé... pero no es la misma mujer.
+NX-0: No es un error...
+NX-0: Está guardado a propósito.
+
+~ diario
+NX-0: Habla de... desapariciones.
+NX-0: Las imágenes no coinciden entre sí.
+NX-0: Si esto está oculto...
+NX-0: Entonces lo anterior no era completo.
+
+~ cierre
+NX-0: Esto no debería estar escondido.
+NX-0: Pero lo está.
+NX-0: ...y alguien decidió que no lo viera.

@@ -42,10 +42,15 @@ Pausa={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+scan={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://data/dialogues/hub/hub_intro.dialogue", "res://data/dialogues/hub/hub_tp_transition.dialogue", "res://data/dialogues/level_01/lvl1_livingroom.dialogue")
+locale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://data/dialogues/hub/hub_intro.dialogue", "res://data/dialogues/hub/hub_tp_transition.dialogue", "res://data/dialogues/level_01/lvl1_livingroom.dialogue", "res://data/dialogues/level_01/lvl1_kitchen_bedroom.dialogue")
 <<<<<<<Updatedupstreamlocale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://dialogues/dialogue01.dialogue")
 
 [physics]
