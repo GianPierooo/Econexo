@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b87wejp4ycrqd" path="res://scenes/levels/level_01/lvl_1_kitchen_bedroom.gd" id="1_h5scf"]
 [ext_resource type="Texture2D" uid="uid://cjixgjab5y0g6" path="res://assets/art/temp/cocina_temp.png" id="2_lavwk"]
 [ext_resource type="Texture2D" uid="uid://dfw7xgrcpy6xy" path="res://assets/art/temp/cajon.png" id="3_1xk5w"]
+[ext_resource type="PackedScene" uid="uid://hjm3s40ohvwl" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="4_lavwk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6bfah"]
 size = Vector2(273.25, 172.27014)
@@ -73,3 +74,5 @@ con
 E"
 label_settings = SubResource("LabelSettings_1xk5w")
 horizontal_alignment = 1
+
+[node name="NavigationArrows" parent="." unique_id=533243254 instance=ExtResource("4_lavwk")]

@@ -11,6 +11,12 @@ var scanning: bool = false
 var dialogue_playing: bool = false
 
 func _ready() -> void:
+	$NavigationArrows.setup(
+		"res://scenes/levels/level_01/lvl1_kitchen_bedroom.tscn",
+	    "res://scenes/levels/level_01/lvl1_container_puzzle.tscn"
+	)
+
+	
 	scan_overlay.visible = false
 	scan_overlay.color = Color(0, 0.8, 1, 0.0)
 	cajon.input_pickable = false

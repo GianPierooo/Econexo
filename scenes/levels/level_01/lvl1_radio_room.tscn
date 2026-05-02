@@ -1,17 +1,62 @@
 [gd_scene format=3 uid="uid://dnid5mmc0n4f8"]
 
-[ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="1_estgc"]
+[ext_resource type="Texture2D" uid="uid://brcsif6std6kr" path="res://assets/art/temp/escritorio_temp.png" id="1_5i8lu"]
+[ext_resource type="Script" uid="uid://q7ppcggnwde" path="res://scenes/levels/level_01/lvl_1_radio_room.gd" id="1_y3yv0"]
+[ext_resource type="Texture2D" uid="uid://dnvyrapv8jl15" path="res://assets/art/level_01/props/radio.png" id="2_y3yv0"]
+[ext_resource type="PackedScene" uid="uid://hjm3s40ohvwl" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="4_vgosi"]
 
-[node name="Lvl1Street01_tscn" type="Node2D" unique_id=111540482]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgosi"]
+size = Vector2(207, 145)
+
+[node name="Lvl1_radio_room" type="Node2D" unique_id=111540482]
+script = ExtResource("1_y3yv0")
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=637358031]
-scale = Vector2(2.6086955, 2.6086955)
-texture = ExtResource("1_estgc")
+texture = ExtResource("1_5i8lu")
 centered = false
 
 [node name="Audio" type="Node2D" parent="." unique_id=908245852]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=892896518]
 
+[node name="DialUI" type="Control" parent="CanvasLayer" unique_id=1503334374]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SliderBG" type="ColorRect" parent="CanvasLayer/DialUI" unique_id=1367333633]
+layout_mode = 0
+offset_left = 854.0
+offset_top = 363.0
+offset_right = 1254.0
+offset_bottom = 383.0
+color = Color(0.101960786, 0.16470589, 0.22745098, 0.8)
+
+[node name="DialIndicator" type="ColorRect" parent="CanvasLayer/DialUI" unique_id=1489052576]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 361.0
+offset_right = 1060.0
+offset_bottom = 381.0
+color = Color(0, 0.8, 1, 1)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1847006324]
 position = Vector2(960, 540)
+
+[node name="Props" type="Node2D" parent="." unique_id=1898057500]
+
+[node name="Radio" type="Area2D" parent="Props" unique_id=130037954]
+position = Vector2(1061, 497)
+
+[node name="Sprite2D" type="Sprite2D" parent="Props/Radio" unique_id=312039245]
+scale = Vector2(0.0992, 0.0928)
+texture = ExtResource("2_y3yv0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Props/Radio" unique_id=1851637060]
+position = Vector2(5.5, 11.5)
+shape = SubResource("RectangleShape2D_vgosi")
+
+[node name="Dial" type="Node2D" parent="Props/Radio" unique_id=2138888130]
+
+[node name="NavigationArrows" parent="." unique_id=533243254 instance=ExtResource("4_vgosi")]

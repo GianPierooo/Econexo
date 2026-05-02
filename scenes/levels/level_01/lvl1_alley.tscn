@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dkywl7h7hj17x" path="res://assets/art/level_01/props/chair.png" id="5_3ly35"]
 [ext_resource type="Texture2D" uid="uid://dnvyrapv8jl15" path="res://assets/art/level_01/props/radio.png" id="6_mm5f1"]
 [ext_resource type="Texture2D" uid="uid://dhvo61fg4d3tj" path="res://assets/art/level_01/props/plate.png" id="7_11qd7"]
+[ext_resource type="PackedScene" uid="uid://hjm3s40ohvwl" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="8_mm5f1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mm5f1"]
 
@@ -82,3 +83,5 @@ texture = ExtResource("7_11qd7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Piezas/Pieza4" unique_id=1660955493]
 shape = SubResource("RectangleShape2D_d8isv")
+
+[node name="NavigationArrows" parent="." unique_id=533243254 instance=ExtResource("8_mm5f1")]

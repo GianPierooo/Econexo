@@ -1,11 +1,30 @@
 [gd_scene format=3 uid="uid://bcukugpsk6bnx"]
 
-[ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="1_3ojvg"]
+[ext_resource type="Texture2D" uid="uid://bwh6dpv54imqq" path="res://assets/art/temp/1920x1080.jpg" id="1_3ojvg"]
+[ext_resource type="Script" uid="uid://dkdrqkr03owcl" path="res://scripts/levels/level_01/reconstruction_void.gd" id="1_05fnm"]
+[ext_resource type="Texture2D" uid="uid://dkywl7h7hj17x" path="res://assets/art/level_01/props/chair.png" id="3_ynubg"]
+[ext_resource type="PackedScene" uid="uid://hjm3s40ohvwl" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="4_ynubg"]
 
-[node name="Lvl1Street01_tscn" type="Node2D" unique_id=111540482]
+[sub_resource type="CircleShape2D" id="CircleShape2D_3cser"]
+radius = 38.63936
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4njv7"]
+radius = 27.45906
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ccwgb"]
+radius = 45.044422
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_am7y6"]
+radius = 53.460266
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ueodd"]
+radius = 61.204575
+
+[node name="Reconstruction_void" type="Node2D" unique_id=111540482]
+script = ExtResource("1_05fnm")
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=1755351520]
-scale = Vector2(2.6086955, 2.6086955)
+scale = Vector2(1, 0.99999994)
 texture = ExtResource("1_3ojvg")
 centered = false
 
@@ -15,3 +34,63 @@ centered = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1109792607]
 position = Vector2(960, 540)
+
+[node name="Pedestales" type="Node2D" parent="." unique_id=121408238]
+
+[node name="Pedestal1" type="Area2D" parent="Pedestales" unique_id=108858221]
+position = Vector2(169, 358)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedestales/Pedestal1" unique_id=1453648447]
+shape = SubResource("CircleShape2D_3cser")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pedestales/Pedestal1" unique_id=1771994114]
+texture = ExtResource("3_ynubg")
+
+[node name="FragmentoSlot" type="Sprite2D" parent="Pedestales/Pedestal1" unique_id=1400816676]
+
+[node name="Pedestal2" type="Area2D" parent="Pedestales" unique_id=1554404022]
+position = Vector2(530, 499)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedestales/Pedestal2" unique_id=109680978]
+shape = SubResource("CircleShape2D_4njv7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pedestales/Pedestal2" unique_id=47921091]
+texture = ExtResource("3_ynubg")
+
+[node name="FragmentoSlot" type="Sprite2D" parent="Pedestales/Pedestal2" unique_id=1713771693]
+
+[node name="Pedestal3" type="Area2D" parent="Pedestales" unique_id=1977099493]
+position = Vector2(960, 430)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedestales/Pedestal3" unique_id=924809359]
+shape = SubResource("CircleShape2D_ccwgb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pedestales/Pedestal3" unique_id=2026093196]
+texture = ExtResource("3_ynubg")
+
+[node name="FragmentoSlot" type="Sprite2D" parent="Pedestales/Pedestal3" unique_id=452516140]
+
+[node name="Pedestal4" type="Area2D" parent="Pedestales" unique_id=449920023]
+position = Vector2(1315, 512)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedestales/Pedestal4" unique_id=1265618731]
+shape = SubResource("CircleShape2D_am7y6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pedestales/Pedestal4" unique_id=116318299]
+scale = Vector2(0.70000005, 0.8513888)
+texture = ExtResource("3_ynubg")
+
+[node name="FragmentoSlot" type="Sprite2D" parent="Pedestales/Pedestal4" unique_id=766433658]
+
+[node name="Pedestal5" type="Area2D" parent="Pedestales" unique_id=1033823158]
+position = Vector2(1717, 458)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedestales/Pedestal5" unique_id=2120989030]
+shape = SubResource("CircleShape2D_ueodd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pedestales/Pedestal5" unique_id=1524250277]
+texture = ExtResource("3_ynubg")
+
+[node name="FragmentoSlot" type="Sprite2D" parent="Pedestales/Pedestal5" unique_id=572283800]
+
+[node name="NavigationArrows" parent="." unique_id=533243254 instance=ExtResource("4_ynubg")]

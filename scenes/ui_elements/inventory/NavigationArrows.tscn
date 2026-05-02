@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://hjm3s40ohvwl"]
+
+[ext_resource type="Script" uid="uid://r5x5mfvb86ci" path="res://scripts/ui/navigation_arrows.gd" id="1_sq5dq"]
+[ext_resource type="Texture2D" uid="uid://c4ngt3owovlk7" path="res://assets/art/temp/flecha_derechas.png" id="2_sq5dq"]
+
+[node name="NavigationArrows" type="CanvasLayer" unique_id=533243254]
+script = ExtResource("1_sq5dq")
+
+[node name="FlechaIzquierda" type="TextureButton" parent="." unique_id=645808087]
+offset_left = 20.0
+offset_top = 460.0
+offset_right = 170.0
+offset_bottom = 610.0
+texture_normal = ExtResource("2_sq5dq")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="FlechaDerecha" type="TextureButton" parent="." unique_id=985111225]
+offset_left = 1771.0
+offset_top = 458.0
+offset_right = 1921.0
+offset_bottom = 608.0
+texture_normal = ExtResource("2_sq5dq")
+ignore_texture_size = true
+stretch_mode = 0

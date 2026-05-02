@@ -14,6 +14,10 @@ var f1_unlocked: bool = false
 const SCENE_NEXT = "res://scenes/levels/level_01/lvl1_kitchen_bedroom.tscn"
 
 func _ready() -> void:
+	$NavigationArrows.setup(
+	"",  # sin anterior porque es la primera escena
+    "res://scenes/levels/level_01/lvl1_kitchen_bedroom.tscn"
+)
 	await get_tree().process_frame
 	silla.clicked.connect(_on_prop_placed.bind("silla"))
 	plato.clicked.connect(_on_prop_placed.bind("plato"))

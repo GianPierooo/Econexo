@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://des4ujxcteq42"
+path="res://.godot/imported/lvl1_radio_room.dialogue-31e36d1c9837567826da94baa6826567.tres"
+
+[deps]
+
+source_file="res://data/dialogues/level_01/lvl1_radio_room.dialogue"
+dest_files=["res://.godot/imported/lvl1_radio_room.dialogue-31e36d1c9837567826da94baa6826567.tres"]
+
+[params]
+
+defaults=true

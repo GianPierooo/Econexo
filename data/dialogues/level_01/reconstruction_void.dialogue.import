@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dauwpst8ln8m5"
+path="res://.godot/imported/reconstruction_void.dialogue-bca752990eec66dd1ee45c72c5247a1e.tres"
+
+[deps]
+
+source_file="res://data/dialogues/level_01/reconstruction_void.dialogue"
+dest_files=["res://.godot/imported/reconstruction_void.dialogue-bca752990eec66dd1ee45c72c5247a1e.tres"]
+
+[params]
+
+defaults=true
