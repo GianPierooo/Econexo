@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://cohv7u6awveb0"]
+
+[ext_resource type="Script" uid="uid://b1yj7c241fvol" path="res://scripts/puzzles/p1_domestic_scene.gd" id="1_5463v"]
+[ext_resource type="Texture2D" uid="uid://bjrg5l72hwf5f" path="res://assets/art/level_01/backgrounds/calle_1.png" id="2_0oj5x"]
+[ext_resource type="Script" uid="uid://cujo24lr4ld2y" path="res://scripts/interactables/DraggableObject.gd" id="3_77dax"]
+[ext_resource type="Texture2D" uid="uid://dkywl7h7hj17x" path="res://assets/art/level_01/props/chair.png" id="4_77dax"]
+[ext_resource type="Texture2D" uid="uid://dhvo61fg4d3tj" path="res://assets/art/level_01/props/plate.png" id="5_dfyds"]
+[ext_resource type="Texture2D" uid="uid://dnvyrapv8jl15" path="res://assets/art/level_01/props/radio.png" id="6_oya81"]
+[ext_resource type="Texture2D" uid="uid://clcshn7r55ph5" path="res://assets/art/level_01/props/frame.png" id="7_berct"]
+[ext_resource type="Texture2D" uid="uid://c4hixm2mk53a" path="res://assets/art/level_01/fragments/f1_family_photo.png" id="8_lq5y6"]
+[ext_resource type="Script" uid="uid://bpugtrrlmgj0t" path="res://scripts/ui/menu/pause.gd" id="9_berct"]
+[ext_resource type="PackedScene" uid="uid://cvfkfnp4e72a" path="res://scenes/ui_elements/inventory/ContextMenu.tscn" id="9_oya81"]
+[ext_resource type="PackedScene" uid="uid://6awsbgkwtrqu" path="res://scenes/ui_elements/inventory/inventoryUI.tscn" id="10_berct"]
+[ext_resource type="PackedScene" uid="uid://ccyycfsq36e8a" path="res://scenes/ui_elements/inventory/ItemSlot.tscn" id="11_lq5y6"]
+[ext_resource type="PackedScene" uid="uid://r085fafan57i" path="res://scenes/ui_elements/Menus/pause_menu.tscn" id="13_lq5y6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0oj5x"]
+radius = 113.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_77dax"]
+radius = 39.20459
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfyds"]
+size = Vector2(171, 157)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oya81"]
+radius = 98.43272
+
+[node name="HouseRoom" type="Node2D" unique_id=2142720028]
+process_mode = 1
+script = ExtResource("1_5463v")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1518949839]
+texture = ExtResource("2_0oj5x")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1620107425]
+
+[node name="ChairSpot" type="Area2D" parent="Hotspots" unique_id=1184669883]
+position = Vector2(441, 735)
+script = ExtResource("3_77dax")
+target_path = NodePath("../../Markers/ChairTarget")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/ChairSpot" unique_id=1338714655]
+shape = SubResource("CircleShape2D_0oj5x")
+
+[node name="ChairSprite" type="Sprite2D" parent="Hotspots/ChairSpot" unique_id=1466788673]
+scale = Vector2(0.7986111, 0.58888894)
+texture = ExtResource("4_77dax")
+
+[node name="PlateSpot" type="Area2D" parent="Hotspots" unique_id=1874999081]
+position = Vector2(1672, 929)
+script = ExtResource("3_77dax")
+target_path = NodePath("../../Markers/PlateTarget")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/PlateSpot" unique_id=1680148721]
+shape = SubResource("CircleShape2D_77dax")
+
+[node name="PlateSprite" type="Sprite2D" parent="Hotspots/PlateSpot" unique_id=895846590]
+scale = Vector2(0.1769048, 0.22214288)
+texture = ExtResource("5_dfyds")
+
+[node name="RadioSpot" type="Area2D" parent="Hotspots" unique_id=1847933885]
+position = Vector2(1323, 876)
+script = ExtResource("3_77dax")
+target_path = NodePath("../../Markers/RadioTarget")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/RadioSpot" unique_id=1342441754]
+shape = SubResource("RectangleShape2D_dfyds")
+
+[node name="RadioSprite" type="Sprite2D" parent="Hotspots/RadioSpot" unique_id=540973882]
+scale = Vector2(0.09639999, 0.084850006)
+texture = ExtResource("6_oya81")
+
+[node name="FrameSpot" type="Area2D" parent="Hotspots" unique_id=2000804012]
+position = Vector2(887, 475)
+script = ExtResource("3_77dax")
+target_path = NodePath("../../Markers/FrameTarget")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/FrameSpot" unique_id=281530065]
+shape = SubResource("CircleShape2D_oya81")
+
+[node name="FrameSprite" type="Sprite2D" parent="Hotspots/FrameSpot" unique_id=1038550583]
+scale = Vector2(0.47569424, 0.5361111)
+texture = ExtResource("7_berct")
+
+[node name="PuzzleObjects" type="Node2D" parent="." unique_id=2054794080]
+
+[node name="Feedback" type="Node2D" parent="." unique_id=38400929]
+
+[node name="Markers" type="Node2D" parent="." unique_id=2070145927]
+
+[node name="ChairTarget" type="Marker2D" parent="Markers" unique_id=1658793364]
+position = Vector2(277, 487)
+
+[node name="PlateTarget" type="Marker2D" parent="Markers" unique_id=849388989]
+position = Vector2(1751, 698)
+
+[node name="RadioTarget" type="Marker2D" parent="Markers" unique_id=1819367930]
+position = Vector2(1502, 660)
+
+[node name="FrameTarget" type="Marker2D" parent="Markers" unique_id=1381415077]
+position = Vector2(1430, 164)
+
+[node name="Fragments" type="Node2D" parent="." unique_id=1475250312]
+visible = false
+
+[node name="FamilyPhotoFragment" type="Area2D" parent="Fragments" unique_id=413451584]
+script = ExtResource("3_77dax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fragments/FamilyPhotoFragment" unique_id=1403518611]
+
+[node name="Sprite2D" type="Sprite2D" parent="Fragments/FamilyPhotoFragment" unique_id=420086343]
+texture = ExtResource("8_lq5y6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1830640926]
+position = Vector2(960, 540)
+script = ExtResource("9_berct")
+
+[node name="Panel" parent="." unique_id=683763917 instance=ExtResource("11_lq5y6")]
+
+[node name="CanvasLayer" parent="." unique_id=1680009072 instance=ExtResource("10_berct")]
+
+[node name="ContextMenu" parent="." unique_id=1072225566 instance=ExtResource("9_oya81")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=686257706]
+
+[node name="PauseMenu" parent="CanvasLayer2" unique_id=991516730 instance=ExtResource("13_lq5y6")]
