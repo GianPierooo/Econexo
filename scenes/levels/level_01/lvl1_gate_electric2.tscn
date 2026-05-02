@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://chb4lnr1c088f"]
+
+[ext_resource type="Script" uid="uid://ff8y0qpqwvtl" path="res://scripts/p3_cables.gd" id="1_ei2bw"]
+[ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="2_o6uul"]
+[ext_resource type="Script" uid="uid://c5albsoyvltla" path="res://scripts/Port.gd" id="3_8pf2p"]
+[ext_resource type="Texture2D" uid="uid://dq80bgaeinrwa" path="res://icon.svg" id="4_60ykk"]
+[ext_resource type="Script" uid="uid://4gjlbypjgg7d" path="res://scripts/CableRenderer.gd" id="4_o6uul"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uvyab"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_60ykk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q8pcj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aa3we"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pcsru"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8thbj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3pbu3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8pf2p"]
+
+[node name="CablePuzzle" type="Node2D" unique_id=111540482]
+script = ExtResource("1_ei2bw")
+
+[node name="Backgruound" type="Sprite2D" parent="." unique_id=1625267798]
+scale = Vector2(2.6086955, 2.6086955)
+texture = ExtResource("2_o6uul")
+centered = false
+
+[node name="PortLeft" type="Node2D" parent="." unique_id=609116801]
+
+[node name="PortA" type="Area2D" parent="PortLeft" unique_id=165328766]
+position = Vector2(303, 216)
+script = ExtResource("3_8pf2p")
+color_id = "rojo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortA" unique_id=1945993902]
+shape = SubResource("CircleShape2D_uvyab")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortA" unique_id=1622577627]
+texture = ExtResource("4_60ykk")
+
+[node name="PortB" type="Area2D" parent="PortLeft" unique_id=1571459181]
+position = Vector2(304, 412)
+script = ExtResource("3_8pf2p")
+color_id = "azul"
+color = Color(0.39502427, 0.46868533, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortB" unique_id=1456538970]
+shape = SubResource("CircleShape2D_60ykk")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortB" unique_id=1087056104]
+texture = ExtResource("4_60ykk")
+
+[node name="PortC" type="Area2D" parent="PortLeft" unique_id=1143804952]
+position = Vector2(309, 660)
+script = ExtResource("3_8pf2p")
+color_id = "amarillo"
+color = Color(0.6111551, 0.5374029, 3.85046e-07, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortC" unique_id=285901549]
+shape = SubResource("CircleShape2D_q8pcj")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortC" unique_id=1750347758]
+texture = ExtResource("4_60ykk")
+
+[node name="PortD" type="Area2D" parent="PortLeft" unique_id=323323010]
+position = Vector2(311, 861)
+script = ExtResource("3_8pf2p")
+color_id = "rosa"
+color = Color(0.9276218, 3.4269095e-05, 0.661997, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortD" unique_id=1677141168]
+shape = SubResource("CircleShape2D_aa3we")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortD" unique_id=1675506289]
+texture = ExtResource("4_60ykk")
+
+[node name="PortRight" type="Node2D" parent="." unique_id=1061303135]
+
+[node name="PortA" type="Area2D" parent="PortRight" unique_id=2029177189]
+position = Vector2(725, 414)
+script = ExtResource("3_8pf2p")
+color_id = "rojo"
+is_left = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortRight/PortA" unique_id=813197835]
+shape = SubResource("CircleShape2D_pcsru")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortRight/PortA" unique_id=1101885264]
+texture = ExtResource("4_60ykk")
+
+[node name="PortB" type="Area2D" parent="PortRight" unique_id=1897172290]
+position = Vector2(722, 657)
+script = ExtResource("3_8pf2p")
+color_id = "azul"
+is_left = false
+color = Color(0.42438066, 0.45858812, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortRight/PortB" unique_id=1645245879]
+shape = SubResource("CircleShape2D_8thbj")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortRight/PortB" unique_id=1956013743]
+texture = ExtResource("4_60ykk")
+
+[node name="PortC" type="Area2D" parent="PortRight" unique_id=871671685]
+position = Vector2(707, 215)
+script = ExtResource("3_8pf2p")
+color_id = "amarillo"
+is_left = false
+color = Color(0.73337966, 0.469755, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortRight/PortC" unique_id=687026215]
+shape = SubResource("CircleShape2D_3pbu3")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortRight/PortC" unique_id=1849485285]
+texture = ExtResource("4_60ykk")
+
+[node name="PortD" type="Area2D" parent="PortRight" unique_id=1939820391]
+position = Vector2(734, 862)
+script = ExtResource("3_8pf2p")
+color_id = "rosa"
+is_left = false
+color = Color(0.87196755, 0.00045396923, 0.84057295, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortRight/PortD" unique_id=560233550]
+shape = SubResource("CircleShape2D_8pf2p")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortRight/PortD" unique_id=1402382756]
+texture = ExtResource("4_60ykk")
+
+[node name="Renderer" type="Node2D" parent="." unique_id=29621837]
+script = ExtResource("4_o6uul")

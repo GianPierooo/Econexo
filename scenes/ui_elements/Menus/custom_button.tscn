@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://x57sf44y5ryp"]
 
 [ext_resource type="Script" uid="uid://m0fhxv1lj0kn" path="res://scripts/ui/menu/customButton.gd" id="1_hjehq"]
-[ext_resource type="AudioStream" uid="uid://8v8rpgl0qgti" path="res://assets/sounds/420997__cogfirestudios__click.wav" id="2_tyljn"]
-[ext_resource type="AudioStream" uid="uid://b3ey8escoy8jq" path="res://assets/sounds/594210__steaq__robo-nope-16bit-flac.wav" id="3_cyhh7"]
+[ext_resource type="AudioStream" uid="uid://lmu1dw53x6s0" path="res://assets/sounds/Cursor_click.wav" id="2_cyhh7"]
+[ext_resource type="AudioStream" uid="uid://bhdxja7iu5yoi" path="res://assets/sounds/Cursor_sobre_opciones.wav" id="3_10she"]
 
 [node name="CustomButton" type="Button" unique_id=1608218663]
 offset_right = 8.0
@@ -11,10 +11,10 @@ text = "Ejemplo"
 script = ExtResource("1_hjehq")
 
 [node name="Click" type="AudioStreamPlayer2D" parent="." unique_id=393497765]
-stream = ExtResource("2_tyljn")
+stream = ExtResource("2_cyhh7")
 
 [node name="OnHover" type="AudioStreamPlayer2D" parent="." unique_id=1038251650]
-stream = ExtResource("3_cyhh7")
+stream = ExtResource("3_10she")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]
