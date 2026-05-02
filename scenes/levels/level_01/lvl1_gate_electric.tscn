@@ -4,6 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="1_tq6nb"]
 [ext_resource type="Script" uid="uid://c88gy7g5uqntk" path="res://scripts/cable_node.gd" id="3_82yob"]
 [ext_resource type="Script" uid="uid://gwkrw3vvy8ny" path="res://scripts/cable_lines.gd" id="4_0oswg"]
+[ext_resource type="Texture2D" uid="uid://dq80bgaeinrwa" path="res://icon.svg" id="4_82yob"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_js6jx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_82yob"]
+radius = 30.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0oswg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hwdh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_74un8"]
 
 [node name="GateElectric" type="Node2D" unique_id=111540482]
 script = ExtResource("1_js6jx")
@@ -26,8 +38,10 @@ state = 2
 node_id = "fuente"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CableSystem/NodeFuente" unique_id=1326322174]
+shape = SubResource("CircleShape2D_js6jx")
 
 [node name="Sprite2D" type="Sprite2D" parent="CableSystem/NodeFuente" unique_id=1584227725]
+texture = ExtResource("4_82yob")
 
 [node name="NodeA" type="Area2D" parent="CableSystem" unique_id=111704766]
 position = Vector2(208.15002, 96.216675)
@@ -35,8 +49,10 @@ script = ExtResource("3_82yob")
 node_id = "A"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CableSystem/NodeA" unique_id=1325056085]
+shape = SubResource("CircleShape2D_82yob")
 
 [node name="Sprite2D" type="Sprite2D" parent="CableSystem/NodeA" unique_id=1318026668]
+texture = ExtResource("4_82yob")
 
 [node name="NodeB" type="Area2D" parent="CableSystem" unique_id=244374081]
 position = Vector2(461.91672, 109.25001)
@@ -44,8 +60,10 @@ script = ExtResource("3_82yob")
 node_id = "B"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CableSystem/NodeB" unique_id=53786946]
+shape = SubResource("CircleShape2D_0oswg")
 
 [node name="Sprite2D" type="Sprite2D" parent="CableSystem/NodeB" unique_id=434169092]
+texture = ExtResource("4_82yob")
 
 [node name="NodeC" type="Area2D" parent="CableSystem" unique_id=669301037]
 position = Vector2(653.9667, 106.56667)
@@ -53,8 +71,10 @@ script = ExtResource("3_82yob")
 node_id = "C"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CableSystem/NodeC" unique_id=1511538057]
+shape = SubResource("CircleShape2D_2hwdh")
 
 [node name="Sprite2D" type="Sprite2D" parent="CableSystem/NodeC" unique_id=1769592304]
+texture = ExtResource("4_82yob")
 
 [node name="NodeSalida" type="Area2D" parent="CableSystem" unique_id=662566334]
 position = Vector2(659.71674, 271.0166)
@@ -62,8 +82,10 @@ script = ExtResource("3_82yob")
 node_id = "salida"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CableSystem/NodeSalida" unique_id=953924971]
+shape = SubResource("CircleShape2D_74un8")
 
 [node name="Sprite2D" type="Sprite2D" parent="CableSystem/NodeSalida" unique_id=293516402]
+texture = ExtResource("4_82yob")
 
 [node name="ExitZone" type="Area2D" parent="." unique_id=452368874]
 scale = Vector2(2.6086955, 2.6086955)

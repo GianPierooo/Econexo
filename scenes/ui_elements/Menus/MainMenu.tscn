@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cutqnpkkod61r" path="res://assets/images/titulo_ver.a_obj_1.png" id="3_wdn13"]
 [ext_resource type="Texture2D" uid="uid://bkpqsmdvfeqy8" path="res://assets/images/titulo_oficial_esquina_1.png" id="4_6pbhs"]
 [ext_resource type="FontFile" uid="uid://btl1p07kct4ye" path="res://assets/fonts/Gabriola.ttf" id="6_0onok"]
-[ext_resource type="AudioStream" uid="uid://c7xwcqu1px32u" path="res://assets/sounds/Menu_Retro.wav" id="7_7nr5q"]
+[ext_resource type="AudioStream" uid="uid://bqp4f1tx7mu2m" path="res://assets/sounds/Menu_Retro2.wav" id="7_7nr5q"]
 [ext_resource type="Texture2D" uid="uid://bwh6dpv54imqq" path="res://assets/art/temp/1920x1080.jpg" id="9_7nr5q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_om6d3"]
@@ -17,6 +17,43 @@ shader_parameter/shake_rate = 0.2
 shader_parameter/shake_speed = 5.0
 shader_parameter/shake_block_size = 30.5
 shader_parameter/shake_color_rate = 0.01
+
+[sub_resource type="Animation" id="Animation_gmjxs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-80.0]
+}
+
+[sub_resource type="Animation" id="Animation_om6d3"]
+resource_name = "fade_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wv5jh"]
+_data = {
+&"RESET": SubResource("Animation_gmjxs"),
+&"fade_in": SubResource("Animation_om6d3")
+}
 
 [node name="MainMenu2" type="Control" unique_id=334767002]
 process_mode = 2
@@ -58,7 +95,13 @@ size_flags_vertical = 4
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1989857697]
 stream = ExtResource("7_7nr5q")
+volume_db = -80.0
 autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AudioStreamPlayer2D" unique_id=1381072023]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_wv5jh")
+autoplay = &"fade_in"
 
 [node name="Label" type="Label" parent="." unique_id=1771393475]
 layout_mode = 1

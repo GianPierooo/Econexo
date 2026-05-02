@@ -8,38 +8,26 @@ enum State { INACTIVE, BROKEN, CONNECTED }
 @export var state: State = State.BROKEN
 @export var node_id: String = ""
 
+@onready var sprite = $Sprite2D
+
 func _ready():
-	# Crear un rectángulo de color temporal para ver el nodo
-	var rect = ColorRect.new()
-	rect.size = Vector2(50, 50)
-	rect.position = Vector2(-25, -25)
-	add_child(rect)
-	_update_visual(rect)
-	
-	# Crear CollisionShape si no existe
-	if get_node_or_null("CollisionShape2D") == null:
-		var shape = CollisionShape2D.new()
-		var circle = CircleShape2D.new()
-		circle.radius = 30
-		shape.shape = circle
-		add_child(shape)
+	input_pickable = true
+	_update_visual()
 
 func set_state(new_state: State):
 	state = new_state
-	# Actualizar color del rect
-	for child in get_children():
-		if child is ColorRect:
-			_update_visual(child)
+	_update_visual()
 
-func _update_visual(rect: ColorRect):
+func _update_visual():
 	match state:
 		State.INACTIVE:
-			rect.color = Color(0.5, 0.5, 0.5)
+			sprite.modulate = Color(0.5, 0.5, 0.5)  # gris
 		State.BROKEN:
-			rect.color = Color(0.8, 0.1, 0.1)
+			sprite.modulate = Color(1.0, 0.2, 0.2)  # rojo
 		State.CONNECTED:
-			rect.color = Color(0.1, 0.8, 0.1)
+			sprite.modulate = Color(0.2, 1.0, 0.2)  # verde
 
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
+		print("Clic en nodo: ", node_id)
 		emit_signal("node_clicked", self)

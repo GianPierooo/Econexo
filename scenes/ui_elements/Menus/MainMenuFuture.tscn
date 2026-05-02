@@ -18,6 +18,43 @@ shader_parameter/shake_speed = 5.0
 shader_parameter/shake_block_size = 30.5
 shader_parameter/shake_color_rate = 0.01
 
+[sub_resource type="Animation" id="Animation_6ypri"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-80.0]
+}
+
+[sub_resource type="Animation" id="Animation_x50ou"]
+resource_name = "fade_im"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.46),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rp47t"]
+_data = {
+&"RESET": SubResource("Animation_6ypri"),
+&"fade_im": SubResource("Animation_x50ou")
+}
+
 [node name="MainMenu" type="Control" unique_id=334767002]
 process_mode = 2
 layout_mode = 3
@@ -58,7 +95,12 @@ size_flags_vertical = 4
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1989857697]
 stream = ExtResource("7_6ypri")
+volume_db = -80.0
 autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AudioStreamPlayer2D" unique_id=1535637085]
+libraries/ = SubResource("AnimationLibrary_rp47t")
+autoplay = &"fade_im"
 
 [node name="Label" type="Label" parent="." unique_id=1771393475]
 layout_mode = 1
