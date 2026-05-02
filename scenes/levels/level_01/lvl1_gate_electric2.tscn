@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://chb4lnr1c088f"]
 
 [ext_resource type="Script" uid="uid://ff8y0qpqwvtl" path="res://scripts/p3_cables.gd" id="1_ei2bw"]
-[ext_resource type="Texture2D" uid="uid://uor216atdujn" path="res://assets/images/puzzle_3.png" id="2_8pf2p"]
+[ext_resource type="Texture2D" uid="uid://uor216atdujn" path="res://assets/images/Puzzles/puzzle_3.png" id="2_8pf2p"]
 [ext_resource type="Script" uid="uid://c5albsoyvltla" path="res://scripts/Port.gd" id="3_8pf2p"]
 [ext_resource type="Texture2D" uid="uid://dq80bgaeinrwa" path="res://icon.svg" id="4_60ykk"]
 [ext_resource type="Script" uid="uid://4gjlbypjgg7d" path="res://scripts/CableRenderer.gd" id="4_o6uul"]
@@ -13,17 +13,22 @@ radius = 50.0
 radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q8pcj"]
+radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aa3we"]
+radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pcsru"]
 radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8thbj"]
+radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3pbu3"]
+radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8pf2p"]
+radius = 50.0
 
 [node name="CablePuzzle" type="Node2D" unique_id=111540482]
 script = ExtResource("1_ei2bw")

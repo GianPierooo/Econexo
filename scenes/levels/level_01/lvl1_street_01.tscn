@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1nairyb18xah"]
 
-[ext_resource type="Texture2D" uid="uid://crd360yeyx0qq" path="res://assets/images/calle_1_final.png" id="1_3o6tn"]
+[ext_resource type="Texture2D" uid="uid://crd360yeyx0qq" path="res://assets/images/Escenas/calle_1_final.png" id="1_3o6tn"]
 [ext_resource type="PackedScene" uid="uid://cvsc2g2i62mgp" path="res://scenes/ui/arrows.tscn" id="2_8871d"]
 [ext_resource type="AudioStream" uid="uid://dwj1rn26v4myk" path="res://assets/sounds/Music_Calle.wav" id="3_kykbi"]
 

@@ -4,9 +4,9 @@ class_name MainMenu
 @onready var titulo = $TituloVer_aObj1
 
 var fondos = [
-	preload("res://assets/images/titulo_ver.f_obj_1.png"),
-	preload("res://assets/images/titulo_ver.f_obj_2.png"),
-	preload("res://assets/images/titulo_ver.f_obj_3.png")
+	preload("res://assets/images/menu/titulo_ver.f_obj_1.png"),
+	preload("res://assets/images/menu/titulo_ver.f_obj_2.png"),
+	preload("res://assets/images/menu/titulo_ver.f_obj_3.png")
 ]
 
 var _tree: SceneTree

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bimhof4je6pag"]
 
-[ext_resource type="Script" uid="uid://db7f7v0knvakm" path="res://scenes/levels/level_01/lvl_1_reception_apagado.gd" id="1_enwtp"]
-[ext_resource type="Texture2D" uid="uid://c2u7rv5rpax7d" path="res://assets/images/recepcion_oscuro.png" id="1_qc86x"]
+[ext_resource type="Script" uid="uid://db7f7v0knvakm" path="res://scripts/levels/lvl_1_reception_apagado.gd" id="1_enwtp"]
+[ext_resource type="Texture2D" uid="uid://c2u7rv5rpax7d" path="res://assets/images/Escenas/recepcion_oscuro.png" id="1_qc86x"]
 [ext_resource type="FontFile" uid="uid://btl1p07kct4ye" path="res://assets/fonts/Gabriola.ttf" id="3_8xlml"]
 
 [node name="Lvl1ReceptionApagado" type="Node2D" unique_id=588065101]

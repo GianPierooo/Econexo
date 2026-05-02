@@ -1,14 +1,24 @@
 [gd_scene format=3 uid="uid://duc6ekxmmd1n5"]
 
 [ext_resource type="Script" uid="uid://dn0oh38433x4d" path="res://scripts/hub/tp_transition.gd" id="1_ebfxv"]
-[ext_resource type="Texture2D" uid="uid://bwh6dpv54imqq" path="res://assets/art/temp/1920x1080.jpg" id="1_ewsyk"]
+[ext_resource type="Texture2D" uid="uid://7oic253ul15e" path="res://assets/ui/vacio.png" id="2_ebfxv"]
+[ext_resource type="Shader" uid="uid://cw5tx0x60df7j" path="res://assets/ui/shaders/tp_transition.gdshader" id="2_voik8"]
+[ext_resource type="Script" uid="uid://csnh24rdjmxup" path="res://scripts/ui/effects/tp_transicion.gd" id="4_281fe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_281fe"]
+shader = ExtResource("2_voik8")
+shader_parameter/speed = 1.5
+shader_parameter/intensity = 0.3
+shader_parameter/color_tint = Color(0, 0.8, 1, 1)
 
 [node name="TpTransition" type="Node2D" unique_id=831756831]
 script = ExtResource("1_ebfxv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1493820105]
-texture = ExtResource("1_ewsyk")
+material = SubResource("ShaderMaterial_281fe")
+texture = ExtResource("2_ebfxv")
 centered = false
+script = ExtResource("4_281fe")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1084728346]
 position = Vector2(960, 540)

@@ -5,6 +5,7 @@
 [node name="Lvl1Street01_tscn" type="Node2D" unique_id=111540482]
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=1635863014]
+position = Vector2(0, -1)
 scale = Vector2(2.6086955, 2.6086955)
 texture = ExtResource("1_7256v")
 centered = false

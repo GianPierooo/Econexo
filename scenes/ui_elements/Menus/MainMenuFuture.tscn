@@ -2,10 +2,10 @@
 
 [ext_resource type="Theme" uid="uid://bdbq87764tfjv" path="res://scenes/ui_elements/Menus/menu_theme.tres" id="1_6ypri"]
 [ext_resource type="Script" uid="uid://cn04pt5p5n1nj" path="res://scenes/ui_elements/Menus/main_menu_futuro.gd" id="2_6ypri"]
-[ext_resource type="Texture2D" uid="uid://c45haiuivkxi5" path="res://assets/images/titulo_ver.f_obj_1.png" id="3_6ypri"]
+[ext_resource type="Texture2D" uid="uid://c45haiuivkxi5" path="res://assets/images/menu/titulo_ver.f_obj_1.png" id="3_6ypri"]
 [ext_resource type="Shader" uid="uid://bn4va5tipi5xu" path="res://scenes/ui_elements/Menus/titulo.gdshader" id="4_2nofx"]
 [ext_resource type="Texture2D" uid="uid://bwh6dpv54imqq" path="res://assets/art/temp/1920x1080.jpg" id="5_q1ocx"]
-[ext_resource type="Texture2D" uid="uid://bkpqsmdvfeqy8" path="res://assets/images/titulo_oficial_esquina_1.png" id="6_cmq0m"]
+[ext_resource type="Texture2D" uid="uid://bkpqsmdvfeqy8" path="res://assets/images/menu/titulo_oficial_esquina_1.png" id="6_cmq0m"]
 [ext_resource type="AudioStream" uid="uid://coqskil8x8lch" path="res://assets/sounds/Menu_Futuro.wav" id="7_6ypri"]
 [ext_resource type="FontFile" uid="uid://btl1p07kct4ye" path="res://assets/fonts/Gabriola.ttf" id="8_w430h"]
 [ext_resource type="PackedScene" uid="uid://x57sf44y5ryp" path="res://scenes/ui_elements/Menus/custom_button.tscn" id="9_r48a1"]
