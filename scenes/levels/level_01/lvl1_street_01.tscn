@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://c1nairyb18xah"]
 
 [ext_resource type="Texture2D" uid="uid://crd360yeyx0qq" path="res://assets/images/calle_1_final.png" id="1_3o6tn"]
+[ext_resource type="PackedScene" uid="uid://cvsc2g2i62mgp" path="res://scenes/ui/arrows.tscn" id="2_8871d"]
 
 [node name="Node2D" type="Node2D" unique_id=959687186]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1463339961]
 position = Vector2(960, 540)
 texture = ExtResource("1_3o6tn")
+
+[node name="ArrowDerecha" parent="." unique_id=771298827 instance=ExtResource("2_8871d")]
+position = Vector2(441, 736)
+
+[connection signal="mouse_entered" from="ArrowDerecha" to="ArrowDerecha" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ArrowDerecha" to="ArrowDerecha" method="_on_mouse_exited"]

@@ -5,6 +5,8 @@ extends Node2D
 @onready var ports_left = $PortLeft
 @onready var ports_right = $PortRight
 
+var dialogues = preload("res://data/dialogues/level_01/p3_dialogues.dialogue")
+
 var dragging_from = null
 var connections_made: int = 0
 const TOTAL_CONNECTIONS: int = 4
@@ -23,7 +25,6 @@ func _ready():
 func _on_drag_started(port):
 	dragging_from = port
 	cable_renderer.start_drag(port.global_position, port.color)
-	print("Arrastrando: ", port.color_id)
 
 func _input(event):
 	if dragging_from == null:
@@ -47,7 +48,7 @@ func _try_connect(mouse_pos: Vector2):
 		if closest_port.color_id == dragging_from.color_id:
 			_make_connection(dragging_from, closest_port)
 		else:
-			print("❌ Color incorrecto")
+			await DialogueManager.show_dialogue_balloon(dialogues, "fallo_conexion")
 			_flash_error(closest_port)
 	
 	dragging_from = null
@@ -61,18 +62,21 @@ func _make_connection(left_port, right_port):
 		left_port.color
 	)
 	connections_made += 1
-	print("✅ Conectado: ", left_port.color_id)
+	
+	if connections_made < TOTAL_CONNECTIONS:
+		await DialogueManager.show_dialogue_balloon(dialogues, "conectando")
 	
 	if connections_made >= TOTAL_CONNECTIONS:
 		_puzzle_complete()
 
 func _flash_error(port):
-	port.sprite.modulate = Color.WHITE
-	await get_tree().create_timer(0.3).timeout
-	port.deactivate_hover()
+	if port.has_method("deactivate_hover"):
+		port.sprite.modulate = Color.WHITE
+		await get_tree().create_timer(0.3).timeout
+		port.deactivate_hover()
 
 func _puzzle_complete():
-	print("🎉 Puzzle completado")
-	FragmentManager.add_fragment("F3_lista_edificio")
-	await get_tree().create_timer(1.0).timeout
-	TransitionManager.fade_to("res://scenes/levels/level_01/rooms/lvl1_reception.tscn")
+	await DialogueManager.show_dialogue_balloon(dialogues, "completado")
+	FragmentManager.energia_activa = true
+	await get_tree().create_timer(0.5).timeout
+	TransitionManager.fade_to("res://scenes/levels/level_01/lvl1_street_02.tscn")

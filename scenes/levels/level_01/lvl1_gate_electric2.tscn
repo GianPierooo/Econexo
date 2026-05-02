@@ -7,15 +7,17 @@
 [ext_resource type="Script" uid="uid://4gjlbypjgg7d" path="res://scripts/CableRenderer.gd" id="4_o6uul"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uvyab"]
-radius = 20.0
+radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_60ykk"]
+radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q8pcj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aa3we"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pcsru"]
+radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8thbj"]
 

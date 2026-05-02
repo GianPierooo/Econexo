@@ -5,6 +5,8 @@ signal fragmento_agregado(fragmento)
 
 var inventario: Array = []
 var catalogo: Dictionary = {}
+var energia_activa: bool = false
+
 
 func _ready():
 	_registrar_fragmentos()

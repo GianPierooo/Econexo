@@ -1,9 +1,30 @@
 [gd_scene format=3 uid="uid://bimhof4je6pag"]
 
+[ext_resource type="Script" uid="uid://db7f7v0knvakm" path="res://scenes/levels/level_01/lvl_1_reception_apagado.gd" id="1_enwtp"]
 [ext_resource type="Texture2D" uid="uid://c2u7rv5rpax7d" path="res://assets/images/recepcion_oscuro.png" id="1_qc86x"]
+[ext_resource type="FontFile" uid="uid://btl1p07kct4ye" path="res://assets/fonts/Gabriola.ttf" id="3_8xlml"]
 
 [node name="Lvl1ReceptionApagado" type="Node2D" unique_id=588065101]
+script = ExtResource("1_enwtp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1035808608]
 position = Vector2(960, 540)
 texture = ExtResource("1_qc86x")
+
+[node name="BtnVolver" type="Button" parent="." unique_id=127618511]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 911.0
+offset_top = 941.0
+offset_right = 1031.0
+offset_bottom = 1010.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("3_8xlml")
+theme_override_font_sizes/font_size = 60
+text = "Volver"

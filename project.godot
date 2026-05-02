@@ -26,7 +26,7 @@ CursorManager="*uid://ctp234tlyy5sv"
 
 [dialogue_manager]
 
-runtime/balloon_path="res://scenes/ui/dialogue/balloon.tscn"
+runtime/balloon_path="uid://dc1vc6yqknksr"
 
 [display]
 
@@ -52,7 +52,7 @@ scan={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://data/dialogues/hub/hub_intro.dialogue", "res://data/dialogues/hub/hub_tp_transition.dialogue", "res://data/dialogues/level_01/lvl1_livingroom.dialogue", "res://data/dialogues/level_01/lvl1_kitchen_bedroom.dialogue", "res://data/dialogues/level_01/lvl1_alley.dialogue", "res://data/dialogues/level_01/lvl1_radio_room.dialogue", "res://data/dialogues/level_01/reconstruction_void.dialogue")
+locale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://data/dialogues/hub/hub_intro.dialogue", "res://data/dialogues/hub/hub_tp_transition.dialogue", "res://data/dialogues/level_01/lvl1_livingroom.dialogue", "res://data/dialogues/level_01/lvl1_kitchen_bedroom.dialogue", "res://data/dialogues/level_01/lvl1_alley.dialogue", "res://data/dialogues/level_01/lvl1_radio_room.dialogue", "res://data/dialogues/level_01/reconstruction_void.dialogue", "res://data/dialogues/level_01/p3_dialogues.dialogue")
 <<<<<<<Updatedupstreamlocale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://dialogues/dialogue01.dialogue")
 
 [physics]

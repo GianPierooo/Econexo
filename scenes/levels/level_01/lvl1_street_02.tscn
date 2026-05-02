@@ -1,9 +1,47 @@
 [gd_scene format=3 uid="uid://cg4m61woyt215"]
 
+[ext_resource type="Script" uid="uid://dnuconeub352r" path="res://scenes/levels/level_01/lvl_1_street_02.gd" id="1_dowhm"]
 [ext_resource type="Texture2D" uid="uid://dxqtssnfeoa3f" path="res://assets/images/calle_2_final.png" id="1_etspy"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dowhm"]
+size = Vector2(513, 785)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2s2v"]
+size = Vector2(92, 151)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twbao"]
+size = Vector2(349, 584)
+
 [node name="Node2D" type="Node2D" unique_id=959687186]
+script = ExtResource("1_dowhm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1463339961]
 position = Vector2(960, 540)
 texture = ExtResource("1_etspy")
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1474420803]
+
+[node name="Puerta" type="Area2D" parent="Hotspots" unique_id=762027282]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Puerta" unique_id=897739650]
+position = Vector2(1087.5, 461.5)
+shape = SubResource("RectangleShape2D_dowhm")
+
+[node name="PanelElectrico" type="Area2D" parent="Hotspots" unique_id=2013701199]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/PanelElectrico" unique_id=1365500346]
+position = Vector2(601, 781)
+shape = SubResource("RectangleShape2D_j2s2v")
+
+[node name="Ventana" type="Area2D" parent="Hotspots" unique_id=1273850302]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Ventana" unique_id=1699723886]
+position = Vector2(323.5, 386)
+shape = SubResource("RectangleShape2D_twbao")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hotspots/Ventana" unique_id=260035564]
+position = Vector2(1791, 402)
+shape = SubResource("RectangleShape2D_twbao")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1770054749]
+position = Vector2(960, 540)

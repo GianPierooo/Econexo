@@ -1,0 +1,37 @@
+~ sin_energia
+NX-0: No hay energía…
+NX-0: El sistema está caído.
+=> END
+
+~ intentando_activar
+NX-0: Voy a intentar activarlo.
+NX-0: Debería ser simple…
+=> END
+
+~ conectando
+NX-0: Esto debería funcionar.
+NX-0: Conexión estable.
+=> END
+
+~ fallo_conexion
+NX-0: No.
+NX-0: Algo no responde.
+=> END
+
+~ casi
+NX-0: Ahora sí…
+NX-0: Está reaccionando.
+=> END
+
+~ completado
+NX-0: Listo.
+NX-0: La energía volvió.
+=> END
+
+~ puerta_abierta
+NX-0: Ahora sí se puede abrir.
+=> END
+
+~ energia_ya_activa
+NX-0: La energía ya está activa.
+=> END

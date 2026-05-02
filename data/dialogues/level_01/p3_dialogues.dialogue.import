@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bemrpa5npamxk"
+path="res://.godot/imported/p3_dialogues.dialogue-46feead6c22b6e2afe31a2e618809e29.tres"
+
+[deps]
+
+source_file="res://data/dialogues/level_01/p3_dialogues.dialogue"
+dest_files=["res://.godot/imported/p3_dialogues.dialogue-46feead6c22b6e2afe31a2e618809e29.tres"]
+
+[params]
+
+defaults=true

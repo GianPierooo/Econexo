@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cvsc2g2i62mgp"]
+
+[ext_resource type="Script" uid="uid://bscqhvno24kn2" path="res://scripts/ui/NavigationArrow.gd" id="1_wefm6"]
+[ext_resource type="Texture2D" uid="uid://c4ngt3owovlk7" path="res://assets/art/temp/flecha_derechas.png" id="2_n1nn5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j2o64"]
+radius = 5.6853333
+height = 11.3706665
+
+[node name="ArrowDerecha" type="Area2D" unique_id=771298827]
+script = ExtResource("1_wefm6")
+target_scene = "res://scenes/levels/level_01/lvl1_street_02.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1718074800]
+position = Vector2(6.0000005, -16)
+rotation = -0.31025103
+scale = Vector2(5.725808, 12.510848)
+shape = SubResource("CapsuleShape2D_j2o64")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1417686861]
+modulate = Color(0, 1, 1, 1)
+self_modulate = Color(5.3924317, 5.3924317, 5.3924317, 1)
+position = Vector2(7.0000005, -12.000002)
+rotation = -1.8824693
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_n1nn5")
