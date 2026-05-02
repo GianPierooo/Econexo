@@ -18,7 +18,7 @@ func _on_puerta_clicked(_viewport, event, _shape):
 		return
 	if FragmentManager.energia_activa:
 		await DialogueManager.show_dialogue_balloon(dialogues, "puerta_abierta")
-		TransitionManager.fade_to("res://scenes/levels/level_0/lvl1_receptionPrendido.tscn")
+		TransitionManager.fade_to("res://scenes/levels/level_01/lvl1_receptionPrendido.tscn")
 	else:
 		await DialogueManager.show_dialogue_balloon(dialogues, "sin_energia")
 
