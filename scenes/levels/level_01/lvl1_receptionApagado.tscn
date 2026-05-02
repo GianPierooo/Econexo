@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bimhof4je6pag"]
+
+[ext_resource type="Texture2D" uid="uid://c2u7rv5rpax7d" path="res://assets/images/recepcion_oscuro.png" id="1_qc86x"]
+
+[node name="Lvl1ReceptionApagado" type="Node2D" unique_id=588065101]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1035808608]
+position = Vector2(960, 540)
+texture = ExtResource("1_qc86x")

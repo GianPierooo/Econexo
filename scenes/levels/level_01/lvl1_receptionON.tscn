@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b5d51b1bfqldl"]
+
+[ext_resource type="Texture2D" uid="uid://bi1c3ntyq3r07" path="res://assets/images/recepcion_con_luz.png" id="1_gyix0"]
+
+[node name="Lvl1Street01_tscn" type="Node2D" unique_id=111540482]
+
+[node name="Backgruound" type="Sprite2D" parent="." unique_id=291425620]
+scale = Vector2(2.6086955, 2.6086955)
+texture = ExtResource("1_gyix0")
+centered = false
+
+[node name="Audio" type="Node2D" parent="." unique_id=1542964928]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2054671620]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=990750483]
+position = Vector2(960, 540)

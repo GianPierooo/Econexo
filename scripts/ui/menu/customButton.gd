@@ -7,6 +7,10 @@ func _on_pressed() -> void:
 	Click.play()
 
 
-
 func _on_mouse_entered() -> void:
 	OnHover.play()
+	CursorManager.set_hover()
+
+
+func _on_mouse_exited() -> void:
+	CursorManager.set_normal()
