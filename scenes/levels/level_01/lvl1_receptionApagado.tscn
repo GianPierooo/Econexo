@@ -11,20 +11,21 @@ script = ExtResource("1_enwtp")
 position = Vector2(960, 540)
 texture = ExtResource("1_qc86x")
 
-[node name="BtnVolver" type="Button" parent="." unique_id=127618511]
-anchors_preset = 3
-anchor_left = 1.0
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1576713409]
+
+[node name="BtnVolver" type="Button" parent="CanvasLayer" unique_id=127618511]
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 911.0
-offset_top = 941.0
-offset_right = 1031.0
-offset_bottom = 1010.0
-grow_horizontal = 0
+offset_left = -60.0
+offset_top = -69.0
+offset_right = 60.0
+grow_horizontal = 2
 grow_vertical = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("3_8xlml")
 theme_override_font_sizes/font_size = 60
 text = "Volver"

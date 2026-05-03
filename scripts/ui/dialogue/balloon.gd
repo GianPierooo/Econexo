@@ -145,6 +145,8 @@ func apply_dialogue_line() -> void:
 
 	dialogue_label.show()
 	if not dialogue_line.text.is_empty():
+		if dialogue_line.character == "NX-0":
+			VoiceManager.play_voz()
 		dialogue_label.type_out()
 		await dialogue_label.finished_typing
 
