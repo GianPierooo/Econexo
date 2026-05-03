@@ -7,12 +7,20 @@ extends Node2D
 
 var dialogues = preload("res://data/dialogues/level_01/p3_dialogues.dialogue")
 
+var sfx_correcto = AudioStreamPlayer.new()
+var sfx_incorrecto = AudioStreamPlayer.new()
+
 var dragging_from = null
 var connections_made: int = 0
 const TOTAL_CONNECTIONS: int = 4
 const SNAP_DISTANCE: float = 60.0
 
 func _ready():
+	add_child(sfx_correcto)
+	add_child(sfx_incorrecto)
+	sfx_correcto.stream = load("res://assets/sounds/Cable_conexion_correcta.wav")
+	sfx_incorrecto.stream = load("res://assets/sounds/Cable_conexion_Incorrecta.wav")
+	
 	for port in ports_left.get_children():
 		if port.has_signal("drag_started"):
 			port.drag_started.connect(_on_drag_started)
@@ -46,8 +54,10 @@ func _try_connect(mouse_pos: Vector2):
 	
 	if closest_port != null:
 		if closest_port.color_id == dragging_from.color_id:
+			sfx_correcto.play()
 			_make_connection(dragging_from, closest_port)
 		else:
+			sfx_incorrecto.play()
 			await DialogueManager.show_dialogue_balloon(dialogues, "fallo_conexion")
 			_flash_error(closest_port)
 	
