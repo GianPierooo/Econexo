@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://1lyqi3cv2ixg"]
+
+[ext_resource type="Script" uid="uid://cvgx8fg70mmsg" path="res://scripts/ui/tooltip_ui.gd" id="1_w87xc"]
+
+[node name="TooltipUi" type="CanvasLayer" unique_id=273014926]
+script = ExtResource("1_w87xc")
+
+[node name="Panel" type="Panel" parent="." unique_id=744144322]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=1513202852]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
