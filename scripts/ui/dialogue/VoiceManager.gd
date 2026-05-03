@@ -2,22 +2,30 @@
 extends Node
 
 var voces: Array = []
-@onready var player = AudioStreamPlayer.new()
+var player: AudioStreamPlayer
 
 func _ready():
+	player = AudioStreamPlayer.new()
 	add_child(player)
 	_cargar_voces()
 
 func _cargar_voces():
-	# Carga todos los archivos de la carpeta
-	var dir = DirAccess.open("res://assets/sounds/nexo/voz/")
-	if dir:
-		dir.list_dir_begin()
-		var archivo = dir.get_next()
-		while archivo != "":
-			if archivo.ends_with(".wav") or archivo.ends_with(".ogg") or archivo.ends_with(".mp3"):
-				voces.append(load("res://assets/sounds/nexo/voz/" + archivo))
-			archivo = dir.get_next()
+	# Lista explícita de archivos — funciona en navegador y escritorio
+	var rutas = [
+		"res://assets/sounds/nexo/voz/Econexo_Voz1.wav",
+		"res://assets/sounds/nexo/voz/Econexo_Voz2.wav",
+		"res://assets/sounds/nexo/voz/Econexo_Voz3.wav",
+		"res://assets/sounds/nexo/voz/Econexo_Voz4.wav",
+		"res://assets/sounds/nexo/voz/Econexo_Voz5.wav",
+		"res://assets/sounds/nexo/voz/Econexo_Voz6.wav",
+        "res://assets/sounds/nexo/voz/Econexo_Voz7.wav"
+	]
+	
+	for ruta in rutas:
+		var audio = load(ruta)
+		if audio:
+			voces.append(audio)
+	
 	print("Voces cargadas: ", voces.size())
 
 func play_voz():
