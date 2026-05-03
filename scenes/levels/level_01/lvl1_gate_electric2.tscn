@@ -41,7 +41,7 @@ centered = false
 [node name="PortLeft" type="Node2D" parent="." unique_id=609116801]
 
 [node name="PortA" type="Area2D" parent="PortLeft" unique_id=165328766]
-position = Vector2(206, 219)
+position = Vector2(194, 566)
 script = ExtResource("3_8pf2p")
 color_id = "rojo"
 
@@ -52,7 +52,7 @@ shape = SubResource("CircleShape2D_uvyab")
 texture = ExtResource("4_60ykk")
 
 [node name="PortB" type="Area2D" parent="PortLeft" unique_id=1571459181]
-position = Vector2(213, 392)
+position = Vector2(204, 212)
 script = ExtResource("3_8pf2p")
 color_id = "azul"
 color = Color(0.39502427, 0.46868533, 1, 1)
@@ -64,7 +64,7 @@ shape = SubResource("CircleShape2D_60ykk")
 texture = ExtResource("4_60ykk")
 
 [node name="PortC" type="Area2D" parent="PortLeft" unique_id=1143804952]
-position = Vector2(215, 563)
+position = Vector2(208, 383)
 script = ExtResource("3_8pf2p")
 color_id = "amarillo"
 color = Color(0.6111551, 0.5374029, 3.85046e-07, 1)
@@ -79,7 +79,7 @@ texture = ExtResource("4_60ykk")
 position = Vector2(205, 738)
 script = ExtResource("3_8pf2p")
 color_id = "rosa"
-color = Color(0.9276218, 3.4269095e-05, 0.661997, 1)
+color = Color(0, 0.64502084, 0.27510613, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortD" unique_id=1677141168]
 shape = SubResource("CircleShape2D_aa3we")
@@ -90,7 +90,7 @@ texture = ExtResource("4_60ykk")
 [node name="PortRight" type="Node2D" parent="." unique_id=1061303135]
 
 [node name="PortA" type="Area2D" parent="PortRight" unique_id=2029177189]
-position = Vector2(1752, 394)
+position = Vector2(1751, 735)
 script = ExtResource("3_8pf2p")
 color_id = "rojo"
 is_left = false
@@ -102,7 +102,7 @@ shape = SubResource("CircleShape2D_pcsru")
 texture = ExtResource("4_60ykk")
 
 [node name="PortB" type="Area2D" parent="PortRight" unique_id=1897172290]
-position = Vector2(1755, 551)
+position = Vector2(1755, 210)
 script = ExtResource("3_8pf2p")
 color_id = "azul"
 is_left = false
@@ -115,7 +115,7 @@ shape = SubResource("CircleShape2D_8thbj")
 texture = ExtResource("4_60ykk")
 
 [node name="PortC" type="Area2D" parent="PortRight" unique_id=871671685]
-position = Vector2(1751, 731)
+position = Vector2(1757, 553)
 script = ExtResource("3_8pf2p")
 color_id = "amarillo"
 is_left = false
@@ -128,11 +128,11 @@ shape = SubResource("CircleShape2D_3pbu3")
 texture = ExtResource("4_60ykk")
 
 [node name="PortD" type="Area2D" parent="PortRight" unique_id=1939820391]
-position = Vector2(1753, 214)
+position = Vector2(1759, 387)
 script = ExtResource("3_8pf2p")
 color_id = "rosa"
 is_left = false
-color = Color(0.87196755, 0.00045396923, 0.84057295, 1)
+color = Color(2.3102762e-06, 0.64185745, 0.29182857, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortRight/PortD" unique_id=560233550]
 shape = SubResource("CircleShape2D_8pf2p")
