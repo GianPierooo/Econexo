@@ -14,7 +14,7 @@ size = Vector2(513, 785)
 size = Vector2(92, 151)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twbao"]
-size = Vector2(315.875, 514.75)
+size = Vector2(349, 584)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j2s2v"]
 particle_flag_disable_z = true
@@ -60,11 +60,11 @@ script = ExtResource("3_nosug")
 tooltip_text = "Asomarse"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Ventana" unique_id=1699723886]
-position = Vector2(327.9375, 415.375)
+position = Vector2(323.5, 386)
 shape = SubResource("RectangleShape2D_twbao")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hotspots/Ventana" unique_id=260035564]
-position = Vector2(1816, 430)
+position = Vector2(1791, 402)
 shape = SubResource("RectangleShape2D_twbao")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1770054749]
