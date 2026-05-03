@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dnuconeub352r" path="res://scripts/levels/lvl_1_street_02.gd" id="1_dowhm"]
 [ext_resource type="Texture2D" uid="uid://dxqtssnfeoa3f" path="res://assets/images/Escenas/calle_2_final.png" id="1_etspy"]
 [ext_resource type="AudioStream" uid="uid://dwj1rn26v4myk" path="res://assets/sounds/Music_Calle.wav" id="3_j2s2v"]
+[ext_resource type="Script" uid="uid://b3mjyk40ilf0i" path="res://scripts/interactables/interactable.gd" id="3_nosug"]
 [ext_resource type="Texture2D" uid="uid://bobkr7pw8yoln" path="res://assets/ui/2d_lights_and_shadows_neutral_point_light.png" id="4_twbao"]
 [ext_resource type="Script" uid="uid://crhosb3kojc2g" path="res://scripts/ui/parpadea.gd" id="5_glf22"]
 
@@ -39,18 +40,24 @@ texture = ExtResource("1_etspy")
 [node name="Hotspots" type="Node2D" parent="." unique_id=1474420803]
 
 [node name="Puerta" type="Area2D" parent="Hotspots" unique_id=762027282]
+script = ExtResource("3_nosug")
+tooltip_text = "Abrir puerta"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Puerta" unique_id=897739650]
 position = Vector2(1087.5, 461.5)
 shape = SubResource("RectangleShape2D_dowhm")
 
 [node name="PanelElectrico" type="Area2D" parent="Hotspots" unique_id=2013701199]
+script = ExtResource("3_nosug")
+tooltip_text = "Ver panel"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/PanelElectrico" unique_id=1365500346]
 position = Vector2(601, 781)
 shape = SubResource("RectangleShape2D_j2s2v")
 
 [node name="Ventana" type="Area2D" parent="Hotspots" unique_id=1273850302]
+script = ExtResource("3_nosug")
+tooltip_text = "Asomarse"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Ventana" unique_id=1699723886]
 position = Vector2(323.5, 386)
