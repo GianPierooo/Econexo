@@ -49,6 +49,7 @@ color_id = "rojo"
 shape = SubResource("CircleShape2D_uvyab")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortA" unique_id=1622577627]
+visible = false
 texture = ExtResource("4_60ykk")
 
 [node name="PortB" type="Area2D" parent="PortLeft" unique_id=1571459181]
@@ -61,6 +62,7 @@ color = Color(0.39502427, 0.46868533, 1, 1)
 shape = SubResource("CircleShape2D_60ykk")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortB" unique_id=1087056104]
+visible = false
 texture = ExtResource("4_60ykk")
 
 [node name="PortC" type="Area2D" parent="PortLeft" unique_id=1143804952]
@@ -73,6 +75,7 @@ color = Color(0.6111551, 0.5374029, 3.85046e-07, 1)
 shape = SubResource("CircleShape2D_q8pcj")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortC" unique_id=1750347758]
+visible = false
 texture = ExtResource("4_60ykk")
 
 [node name="PortD" type="Area2D" parent="PortLeft" unique_id=323323010]
@@ -85,6 +88,7 @@ color = Color(0, 0.64502084, 0.27510613, 1)
 shape = SubResource("CircleShape2D_aa3we")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortD" unique_id=1675506289]
+visible = false
 texture = ExtResource("4_60ykk")
 
 [node name="PortRight" type="Node2D" parent="." unique_id=1061303135]
@@ -99,6 +103,7 @@ is_left = false
 shape = SubResource("CircleShape2D_pcsru")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortRight/PortA" unique_id=1101885264]
+visible = false
 texture = ExtResource("4_60ykk")
 
 [node name="PortB" type="Area2D" parent="PortRight" unique_id=1897172290]
@@ -112,6 +117,7 @@ color = Color(0.42438066, 0.45858812, 1, 1)
 shape = SubResource("CircleShape2D_8thbj")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortRight/PortB" unique_id=1956013743]
+visible = false
 texture = ExtResource("4_60ykk")
 
 [node name="PortC" type="Area2D" parent="PortRight" unique_id=871671685]
@@ -125,6 +131,7 @@ color = Color(0.73337966, 0.469755, 0, 1)
 shape = SubResource("CircleShape2D_3pbu3")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortRight/PortC" unique_id=1849485285]
+visible = false
 texture = ExtResource("4_60ykk")
 
 [node name="PortD" type="Area2D" parent="PortRight" unique_id=1939820391]
@@ -138,6 +145,7 @@ color = Color(2.3102762e-06, 0.64185745, 0.29182857, 1)
 shape = SubResource("CircleShape2D_8pf2p")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortRight/PortD" unique_id=1402382756]
+visible = false
 texture = ExtResource("4_60ykk")
 
 [node name="Renderer" type="Node2D" parent="." unique_id=29621837]

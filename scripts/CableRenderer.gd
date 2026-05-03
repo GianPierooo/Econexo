@@ -7,7 +7,7 @@ var dragging_cable = null  # cable que se está arrastrando ahora
 func _draw():
 	# Dibujar cables conectados
 	for cable in cables:
-		_draw_curve(cable.from, cable.to, cable.color, 6.0)
+		_draw_curve(cable.from, cable.to, cable.color, 30.0)
 	
 	# Dibujar cable en arrastre
 	if dragging_cable:
@@ -15,7 +15,7 @@ func _draw():
 			dragging_cable.from,
 			get_global_mouse_position(),
 			dragging_cable.color,
-			4.0
+			30.0
 		)
 
 func _draw_curve(from: Vector2, to: Vector2, color: Color, width: float):
