@@ -44,6 +44,7 @@ centered = false
 position = Vector2(194, 566)
 script = ExtResource("3_8pf2p")
 color_id = "rojo"
+color = Color(0.2, 0.11372549, 0.11764706, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortA" unique_id=1945993902]
 shape = SubResource("CircleShape2D_uvyab")
@@ -56,7 +57,7 @@ texture = ExtResource("4_60ykk")
 position = Vector2(204, 212)
 script = ExtResource("3_8pf2p")
 color_id = "azul"
-color = Color(0.39502427, 0.46868533, 1, 1)
+color = Color(0.18039216, 0.17254902, 0.24705882, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortB" unique_id=1456538970]
 shape = SubResource("CircleShape2D_60ykk")
@@ -82,7 +83,7 @@ texture = ExtResource("4_60ykk")
 position = Vector2(205, 738)
 script = ExtResource("3_8pf2p")
 color_id = "rosa"
-color = Color(0, 0.64502084, 0.27510613, 1)
+color = Color(0.16862746, 0.20392157, 0.14509805, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortD" unique_id=1677141168]
 shape = SubResource("CircleShape2D_aa3we")
