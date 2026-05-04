@@ -143,12 +143,12 @@ func apply_dialogue_line() -> void:
 	balloon.show()
 	will_hide_balloon = false
 
-	dialogue_label.show()
-	if not dialogue_line.text.is_empty():
-		if dialogue_line.character == "NX-0":
-			VoiceManager.play_voz()
-		dialogue_label.type_out()
-		await dialogue_label.finished_typing
+	#dialogue_label.show()
+	#if not dialogue_line.text.is_empty():
+		#if dialogue_line.character == "NX-0":
+			#VoiceManager.play_voz()
+		#dialogue_label.type_out()
+		#await dialogue_label.finished_typing
 
 	# Wait for next line
 	if dialogue_line.has_tag("voice"):

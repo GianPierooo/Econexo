@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckw3mrlkrejdu"
-path="res://.godot/imported/lista_de_residentes.png-742b4c7d52459e46f082cd0748bb7dfa.ctex"
+path="res://.godot/imported/f3_lista.png-8d675b017b2162b20bb6ea847e657715.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Puzzles/lista_de_residentes.png"
-dest_files=["res://.godot/imported/lista_de_residentes.png-742b4c7d52459e46f082cd0748bb7dfa.ctex"]
+source_file="res://assets/art/level_01/fragments/f3_lista.png"
+dest_files=["res://.godot/imported/f3_lista.png-8d675b017b2162b20bb6ea847e657715.ctex"]
 
 [params]
 

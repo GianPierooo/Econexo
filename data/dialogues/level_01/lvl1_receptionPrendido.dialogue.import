@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dboiy3cgj53vr"
+path="res://.godot/imported/lvl1_receptionPrendido.dialogue-2c2e14f3a276012faaf41b642a5f7a82.tres"
+
+[deps]
+
+source_file="res://data/dialogues/level_01/lvl1_receptionPrendido.dialogue"
+dest_files=["res://.godot/imported/lvl1_receptionPrendido.dialogue-2c2e14f3a276012faaf41b642a5f7a82.tres"]
+
+[params]
+
+defaults=true

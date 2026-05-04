@@ -54,7 +54,7 @@ scan={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://data/dialogues/hub/hub_intro.dialogue", "res://data/dialogues/hub/hub_tp_transition.dialogue", "res://data/dialogues/level_01/lvl1_livingroom.dialogue", "res://data/dialogues/level_01/lvl1_kitchen_bedroom.dialogue", "res://data/dialogues/level_01/lvl1_alley.dialogue", "res://data/dialogues/level_01/lvl1_radio_room.dialogue", "res://data/dialogues/level_01/reconstruction_void.dialogue", "res://data/dialogues/level_01/p3_dialogues.dialogue")
+locale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://data/dialogues/hub/hub_intro.dialogue", "res://data/dialogues/hub/hub_tp_transition.dialogue", "res://data/dialogues/level_01/lvl1_livingroom.dialogue", "res://data/dialogues/level_01/lvl1_kitchen_bedroom.dialogue", "res://data/dialogues/level_01/lvl1_alley.dialogue", "res://data/dialogues/level_01/lvl1_radio_room.dialogue", "res://data/dialogues/level_01/reconstruction_void.dialogue", "res://data/dialogues/level_01/p3_dialogues.dialogue", "res://data/dialogues/level_01/lvl1_receptionPrendido.dialogue")
 <<<<<<<Updatedupstreamlocale/translations_pot_files=PackedStringArray("res://data/dialogues/level_01/dialogue01.dialogue", "res://dialogues/dialogue01.dialogue")
 
 [physics]
