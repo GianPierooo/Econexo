@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://3tmuprnlbtri"]
 
 [ext_resource type="Script" uid="uid://x6kwukmxmhn6" path="res://scripts/levels/lvl_1_livingroom.gd" id="1_57i3f"]
-[ext_resource type="Texture2D" uid="uid://dong6fyvvcf5i" path="res://assets/art/temp/living_temp.png" id="1_njenk"]
+[ext_resource type="Texture2D" uid="uid://c5ts2fw3afoau" path="res://assets/images/Escenas/livingroom.png" id="2_pvnrt"]
 [ext_resource type="Texture2D" uid="uid://dkywl7h7hj17x" path="res://assets/art/level_01/props/chair.png" id="3_60wle"]
 [ext_resource type="Script" uid="uid://cujo24lr4ld2y" path="res://scripts/interactables/DraggableObject.gd" id="3_ty5l8"]
 [ext_resource type="Texture2D" uid="uid://dhvo61fg4d3tj" path="res://assets/art/level_01/props/plate.png" id="4_ty5l8"]
@@ -26,7 +26,7 @@ script = ExtResource("1_57i3f")
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=1979578783]
 scale = Vector2(1.0000001, 1)
-texture = ExtResource("1_njenk")
+texture = ExtResource("2_pvnrt")
 centered = false
 
 [node name="Props" type="Node2D" parent="." unique_id=1185418538]

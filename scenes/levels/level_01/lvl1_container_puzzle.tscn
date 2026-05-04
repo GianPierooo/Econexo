@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://g5uem62n3750"]
 
-[ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="1_3bf8g"]
+[ext_resource type="Texture2D" uid="uid://juh2wlwgd8q2" path="res://assets/images/Escenas/tacho_final.png" id="1_3bf8g"]
 
 [node name="Lvl1Street01_tscn" type="Node2D" unique_id=111540482]
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=635696546]
-scale = Vector2(2.6086955, 2.6086955)
 texture = ExtResource("1_3bf8g")
 centered = false
 

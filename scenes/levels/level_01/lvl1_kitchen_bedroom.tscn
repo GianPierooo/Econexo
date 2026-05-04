@@ -1,12 +1,8 @@
 [gd_scene format=3 uid="uid://bxuii5t2mohfy"]
 
-[ext_resource type="Script" uid="uid://b87wejp4ycrqd" path="res://scenes/levels/level_01/lvl_1_kitchen_bedroom.gd" id="1_h5scf"]
-[ext_resource type="Texture2D" uid="uid://cjixgjab5y0g6" path="res://assets/art/temp/cocina_temp.png" id="2_lavwk"]
-[ext_resource type="Texture2D" uid="uid://dfw7xgrcpy6xy" path="res://assets/art/temp/cajon.png" id="3_1xk5w"]
-[ext_resource type="PackedScene" uid="uid://hjm3s40ohvwl" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="4_lavwk"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6bfah"]
-size = Vector2(273.25, 172.27014)
+[ext_resource type="Script" uid="uid://b87wejp4ycrqd" path="res://scripts/levels/lvl_1_kitchen_bedroom.gd" id="1_h5scf"]
+[ext_resource type="Texture2D" uid="uid://bkful3ceub3ax" path="res://assets/images/Escenas/escritorio_con_diario.png" id="2_h5scf"]
+[ext_resource type="PackedScene" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="4_lavwk"]
 
 [sub_resource type="SystemFont" id="SystemFont_h5scf"]
 
@@ -23,7 +19,7 @@ script = ExtResource("1_h5scf")
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=1823491064]
 scale = Vector2(0.9973959, 1.0037037)
-texture = ExtResource("2_lavwk")
+texture = ExtResource("2_h5scf")
 centered = false
 
 [node name="Audio" type="Node2D" parent="." unique_id=2025683840]
@@ -34,20 +30,6 @@ centered = false
 position = Vector2(960, 540)
 
 [node name="Props" type="Node2D" parent="." unique_id=503330133]
-
-[node name="Cajon" type="Area2D" parent="Props" unique_id=1963492484]
-position = Vector2(352, 618)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Props/Cajon" unique_id=510420224]
-position = Vector2(1.9999695, -3.999939)
-rotation = -0.30758
-shape = SubResource("RectangleShape2D_6bfah")
-
-[node name="Sprite2D" type="Sprite2D" parent="Props/Cajon" unique_id=1122372882]
-position = Vector2(-3, 0)
-rotation = -0.29588315
-scale = Vector2(0.89444447, 0.67777777)
-texture = ExtResource("3_1xk5w")
 
 [node name="ScanOverlay" type="CanvasLayer" parent="." unique_id=1435794473]
 
