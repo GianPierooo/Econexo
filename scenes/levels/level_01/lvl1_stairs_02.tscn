@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://cxkrun4hy7i6b"]
 
-[ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="1_7256v"]
+[ext_resource type="Texture2D" uid="uid://dx78mdp22d2ww" path="res://assets/images/Escenas/escaleras_2.png" id="1_7256v"]
 
-[node name="Lvl1Street01_tscn" type="Node2D" unique_id=111540482]
+[node name="Lvl1Stairs02_tscn" type="Node2D" unique_id=111540482]
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=1635863014]
 position = Vector2(0, -1)
-scale = Vector2(2.6086955, 2.6086955)
 texture = ExtResource("1_7256v")
 centered = false
 

@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://d1o820neein2h"]
 
-[ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="1_rgdiu"]
+[ext_resource type="Texture2D" uid="uid://c4qbjtw4c61hl" path="res://assets/images/Escenas/escaleras_1.png" id="1_x1u3y"]
+[ext_resource type="PackedScene" uid="uid://cvsc2g2i62mgp" path="res://scenes/ui/arrows.tscn" id="2_kniqu"]
 
-[node name="Lvl1Street01_tscn" type="Node2D" unique_id=111540482]
+[node name="Lvl1Stairs01_tscn" type="Node2D" unique_id=111540482]
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=819943288]
-scale = Vector2(2.6086955, 2.6086955)
-texture = ExtResource("1_rgdiu")
+texture = ExtResource("1_x1u3y")
 centered = false
 
 [node name="Audio" type="Node2D" parent="." unique_id=530403202]
@@ -15,3 +15,8 @@ centered = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=618148536]
 position = Vector2(960, 540)
+
+[node name="ArrowDerecha" parent="." unique_id=771298827 instance=ExtResource("2_kniqu")]
+position = Vector2(560, 590)
+rotation = 0.42962104
+target_scene = "res://scenes/levels/level_01/lvl1_stairs_02.tscn"

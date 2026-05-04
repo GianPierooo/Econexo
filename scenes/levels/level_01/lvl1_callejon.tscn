@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://vttglekw2hae"]
+
+[ext_resource type="Texture2D" uid="uid://c6dwj0wn6mnip" path="res://assets/prueba_escena.jpg" id="1_5mjnu"]
+
+[node name="Lvl1Street01_tscn" type="Node2D" unique_id=111540482]
+
+[node name="Backgruound" type="Sprite2D" parent="." unique_id=635696546]
+scale = Vector2(2.6086955, 2.6086955)
+texture = ExtResource("1_5mjnu")
+centered = false
+
+[node name="Audio" type="Node2D" parent="." unique_id=1904019005]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=484976712]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=219616434]
+position = Vector2(960, 540)
