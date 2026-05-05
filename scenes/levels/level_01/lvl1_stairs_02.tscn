@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://cxkrun4hy7i6b"]
 
 [ext_resource type="Texture2D" uid="uid://dx78mdp22d2ww" path="res://assets/images/Escenas/escaleras_2.png" id="1_7256v"]
+[ext_resource type="PackedScene" uid="uid://cvsc2g2i62mgp" path="res://scenes/ui/arrows.tscn" id="2_jnwga"]
+[ext_resource type="AudioStream" uid="uid://ur6d2xbs2ehc" path="res://assets/sounds/Music_Edificio.wav" id="3_7xxk2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xxk2"]
+size = Vector2(541, 786.75)
 
 [node name="Lvl1Stairs02_tscn" type="Node2D" unique_id=111540482]
 
@@ -9,9 +14,31 @@ position = Vector2(0, -1)
 texture = ExtResource("1_7256v")
 centered = false
 
+[node name="Area2D" type="Area2D" parent="Backgruound" unique_id=156481948]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgruound/Area2D" unique_id=1802871219]
+position = Vector2(379.5, 490.375)
+shape = SubResource("RectangleShape2D_7xxk2")
+
+[node name="ArrowDerecha" parent="Backgruound/Area2D" unique_id=771298827 instance=ExtResource("2_jnwga")]
+position = Vector2(403, 668.00006)
+rotation = 0.2469554
+target_scene = "res://scenes/levels/level_01/lvl1_livingroom.tscn"
+tooltip_text = "Entrar"
+
+[node name="ArrowDerecha2" parent="Backgruound/Area2D" unique_id=689538888 instance=ExtResource("2_jnwga")]
+position = Vector2(1555, 939.00006)
+rotation = 2.102126
+target_scene = "res://scenes/levels/level_01/lvl1_stairs_01.tscn"
+tooltip_text = "Bajar"
+
 [node name="Audio" type="Node2D" parent="." unique_id=838258169]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=49923961]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1825307051]
 position = Vector2(960, 540)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2119139162]
+stream = ExtResource("3_7xxk2")
+autoplay = true

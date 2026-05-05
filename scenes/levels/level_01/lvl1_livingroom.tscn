@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://clcshn7r55ph5" path="res://assets/art/level_01/props/frame.png" id="5_pvnrt"]
 [ext_resource type="Texture2D" uid="uid://dnvyrapv8jl15" path="res://assets/art/level_01/props/radio.png" id="6_lr0fv"]
 [ext_resource type="PackedScene" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="8_pvnrt"]
+[ext_resource type="AudioStream" uid="uid://rpnci4sfurs3" path="res://assets/sounds/Music_Casa.wav" id="9_lr0fv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewkfm"]
 size = Vector2(178, 254)
@@ -101,3 +102,7 @@ metadata/_edit_lock_ = true
 position = Vector2(960, 540)
 
 [node name="NavigationArrows" parent="." unique_id=533243254 instance=ExtResource("8_pvnrt")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1184864194]
+stream = ExtResource("9_lr0fv")
+autoplay = true

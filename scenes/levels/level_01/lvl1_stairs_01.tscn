@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c4qbjtw4c61hl" path="res://assets/images/Escenas/escaleras_1.png" id="1_x1u3y"]
 [ext_resource type="PackedScene" uid="uid://cvsc2g2i62mgp" path="res://scenes/ui/arrows.tscn" id="2_kniqu"]
+[ext_resource type="AudioStream" uid="uid://ur6d2xbs2ehc" path="res://assets/sounds/Music_Edificio.wav" id="3_kniqu"]
 
 [node name="Lvl1Stairs01_tscn" type="Node2D" unique_id=111540482]
 
@@ -20,3 +21,7 @@ position = Vector2(960, 540)
 position = Vector2(560, 590)
 rotation = 0.42962104
 target_scene = "res://scenes/levels/level_01/lvl1_stairs_02.tscn"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1003279720]
+stream = ExtResource("3_kniqu")
+autoplay = true
