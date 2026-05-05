@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bi1c3ntyq3r07" path="res://assets/images/Escenas/recepcion_con_luz.png" id="1_6xvqp"]
 [ext_resource type="Script" uid="uid://gb8phxms78ir" path="res://scenes/levels/level_01/lvl_1_reception_prendido.gd" id="1_k8lvd"]
 [ext_resource type="Script" uid="uid://b3mjyk40ilf0i" path="res://scripts/interactables/interactable.gd" id="3_0ph45"]
-[ext_resource type="PackedScene" uid="uid://hjm3s40ohvwl" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="3_sk6hd"]
+[ext_resource type="PackedScene" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="3_sk6hd"]
 [ext_resource type="Texture2D" uid="uid://ckw3mrlkrejdu" path="res://assets/art/level_01/fragments/f3_lista.png" id="4_v7vds"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xvqp"]
@@ -19,6 +19,7 @@ texture = ExtResource("1_6xvqp")
 [node name="LibroFragmento" type="Area2D" parent="." unique_id=795271787]
 position = Vector2(852, 573)
 script = ExtResource("3_0ph45")
+tooltip_text = "Ver libro"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LibroFragmento" unique_id=2011033034]
 position = Vector2(-3.5, 1)

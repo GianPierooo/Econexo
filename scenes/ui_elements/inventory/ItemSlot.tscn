@@ -16,8 +16,3 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-
-[node name="Panel" type="Panel" parent="." unique_id=1377309872]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0

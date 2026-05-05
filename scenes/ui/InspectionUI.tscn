@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://cqxffxil2mqpq" path="res://scripts/ui/InspectionUI.gd" id="1_cntel"]
 [ext_resource type="Texture2D" uid="uid://c4hixm2mk53a" path="res://assets/art/level_01/fragments/f1_family_photo.png" id="2_2y54y"]
 
-[node name="InspectionUi" type="Node2D" unique_id=1415517266]
+[node name="InspectionUi" type="CanvasLayer" unique_id=1778650537]
+layer = 15
 script = ExtResource("1_cntel")
 
 [node name="Panel" type="Panel" parent="." unique_id=1686970010]

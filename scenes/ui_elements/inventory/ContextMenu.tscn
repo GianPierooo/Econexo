@@ -2,24 +2,31 @@
 
 [ext_resource type="Script" uid="uid://ctq56xuwto2dr" path="res://scripts/ui/Inventario/ContextMenu.gd" id="1_1kx63"]
 
-[node name="ContextMenu" type="Panel" unique_id=1072225566]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ContextMenu" type="CanvasLayer" unique_id=1642416853]
+layer = 20
 script = ExtResource("1_1kx63")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=602382683]
+[node name="Panel" type="Panel" parent="." unique_id=1326030680]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=602382683]
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 59.0
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=1817581630]
+[node name="Label" type="Label" parent="Panel/VBoxContainer" unique_id=1817581630]
 layout_mode = 2
 
-[node name="BtnInspect" type="Button" parent="VBoxContainer" unique_id=1690607259]
+[node name="BtnInspect" type="Button" parent="Panel/VBoxContainer" unique_id=1690607259]
+modulate = Color(0.2784314, 1, 1, 1)
 layout_mode = 2
+text = "Inspeccionar"
 
-[node name="BtnScan" type="Button" parent="VBoxContainer" unique_id=568889716]
+[node name="BtnScan" type="Button" parent="Panel/VBoxContainer" unique_id=568889716]
+modulate = Color(0.2784314, 1, 1, 1)
 layout_mode = 2
+text = "Escanear"
 
-[node name="BtnClose" type="Button" parent="VBoxContainer" unique_id=1320011177]
+[node name="BtnClose" type="Button" parent="Panel/VBoxContainer" unique_id=1320011177]
+modulate = Color(0.2784314, 1, 1, 1)
 layout_mode = 2
+text = "Cerrar"
