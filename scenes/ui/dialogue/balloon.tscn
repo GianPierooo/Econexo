@@ -124,6 +124,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer" unique_id=810051587]
+modulate = Color(0.43038046, 0.9999998, 0.91243523, 1)
 clip_children = 2
 layout_mode = 2
 mouse_filter = 1

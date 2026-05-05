@@ -14,12 +14,13 @@ func _ready() -> void:
 	
 	portal_on.visible = false
 	portal_off.visible = true
-	
 	terminal.input_pickable = false
 	portal.input_pickable = false
 	
-	terminal.clicked.connect(_on_terminal_clicked)
-	portal.clicked.connect(_on_portal_clicked)
+	if not terminal.clicked.is_connected(_on_terminal_clicked):
+		terminal.clicked.connect(_on_terminal_clicked)
+	if not portal.clicked.is_connected(_on_portal_clicked):
+		portal.clicked.connect(_on_portal_clicked)
 	
 	start_intro()
 
@@ -32,7 +33,7 @@ func start_intro() -> void:
 		enable_hub_interaction()
 		return
 	
-	var balloon = DialogueManager.show_example_dialogue_balloon(dialogue_resource, "start")
+	var balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
 	await balloon.tree_exited
 	
 	intro_finished = true
@@ -47,10 +48,8 @@ func _on_terminal_clicked() -> void:
 		return
 	
 	if portal_activated:
-		# Ya fue activado antes, NX-0 recuerda
-		_play_dialogue("res://data/dialogues/hub/hub_terminal_done.dialogue")
+		await _play_dialogue("res://data/dialogues/hub/hub_terminal_done.dialogue")
 	else:
-		# Primera vez: diálogo y enciende el portal al terminar
 		await _play_dialogue("res://data/dialogues/hub/hub_terminal_activate.dialogue")
 		activate_portal()
 
@@ -59,11 +58,9 @@ func _on_portal_clicked() -> void:
 		return
 	
 	if portal_activated:
-		# Portal encendido: el jugador entra
 		go_to_transition()
 	else:
-		# Portal apagado: NX-0 indica que hay que usar el terminal
-		_play_dialogue("res://data/dialogues/hub/hub_portal_inactive.dialogue")
+		await _play_dialogue("res://data/dialogues/hub/hub_portal_inactive.dialogue")
 
 func activate_portal() -> void:
 	if portal_activated:
@@ -73,9 +70,9 @@ func activate_portal() -> void:
 	portal_on.visible = true
 
 func go_to_transition() -> void:
-	get_tree().change_scene_to_file("res://scenes/hub/tp_transition.tscn")
+	await _play_dialogue("res://data/dialogues/hub/hub_tp_transition.dialogue")
+	TransitionManager.fade_to("res://scenes/hub/tp_transition.tscn")
 
-# Helper: reproduce un diálogo y bloquea interacción mientras dura
 func _play_dialogue(path: String) -> void:
 	var dialogue_resource = load(path)
 	if dialogue_resource == null:
@@ -86,7 +83,7 @@ func _play_dialogue(path: String) -> void:
 	terminal.input_pickable = false
 	portal.input_pickable = false
 	
-	var balloon = DialogueManager.show_example_dialogue_balloon(dialogue_resource, "start")
+	var balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
 	await balloon.tree_exited
 	
 	dialogue_playing = false
