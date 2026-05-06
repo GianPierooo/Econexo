@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://dnid5mmc0n4f8"]
 
 [ext_resource type="Texture2D" uid="uid://brcsif6std6kr" path="res://assets/art/temp/escritorio_temp.png" id="1_5i8lu"]
-[ext_resource type="Script" uid="uid://q7ppcggnwde" path="res://scenes/levels/level_01/lvl_1_radio_room.gd" id="1_y3yv0"]
-[ext_resource type="Texture2D" uid="uid://dnvyrapv8jl15" path="res://assets/art/level_01/props/radio.png" id="2_y3yv0"]
+[ext_resource type="Script" uid="uid://q7ppcggnwde" path="res://scripts/levels/lvl_1_radio_room.gd" id="1_vgosi"]
+[ext_resource type="Texture2D" uid="uid://doxx27lelc7bk" path="res://assets/images/Puzzles/redio_spica.png" id="3_vgosi"]
+[ext_resource type="Texture2D" uid="uid://vd6lq2r6hx3s" path="res://assets/art/level_01/props/ruedita.png" id="4_kbqs1"]
+[ext_resource type="Texture2D" uid="uid://c4ngt3owovlk7" path="res://assets/art/temp/flecha_derechas.png" id="4_muvvl"]
 [ext_resource type="PackedScene" uid="uid://hjm3s40ohvwl" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="4_vgosi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgosi"]
-size = Vector2(207, 145)
+size = Vector2(260, 118.5)
 
 [node name="Lvl1_radio_room" type="Node2D" unique_id=111540482]
-script = ExtResource("1_y3yv0")
+script = ExtResource("1_vgosi")
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=637358031]
 texture = ExtResource("1_5i8lu")
@@ -25,21 +27,33 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="SliderBG" type="ColorRect" parent="CanvasLayer/DialUI" unique_id=1367333633]
+[node name="RadioClouseup" type="TextureRect" parent="CanvasLayer/DialUI" unique_id=1239032821]
 layout_mode = 0
-offset_left = 854.0
-offset_top = 363.0
-offset_right = 1254.0
-offset_bottom = 383.0
-color = Color(0.101960786, 0.16470589, 0.22745098, 0.8)
+offset_left = 160.0
+offset_top = 140.0
+offset_right = 1760.0
+offset_bottom = 940.0
+texture = ExtResource("3_vgosi")
+expand_mode = 1
 
-[node name="DialIndicator" type="ColorRect" parent="CanvasLayer/DialUI" unique_id=1489052576]
+[node name="DialWheel" type="TextureRect" parent="CanvasLayer/DialUI" unique_id=1187068339]
 layout_mode = 0
-offset_left = 1040.0
-offset_top = 361.0
-offset_right = 1060.0
-offset_bottom = 381.0
-color = Color(0, 0.8, 1, 1)
+offset_left = 906.0
+offset_top = 227.0
+offset_right = 1929.0
+offset_bottom = 725.0
+texture = ExtResource("4_kbqs1")
+expand_mode = 1
+
+[node name="BtnCerrar" type="Button" parent="CanvasLayer/DialUI" unique_id=1449475091]
+layout_mode = 0
+offset_left = 1761.0
+offset_top = 10.0
+offset_right = 1914.0
+offset_bottom = 163.0
+icon = ExtResource("4_muvvl")
+flat = true
+expand_icon = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1847006324]
 position = Vector2(960, 540)
@@ -50,11 +64,12 @@ position = Vector2(960, 540)
 position = Vector2(1061, 497)
 
 [node name="Sprite2D" type="Sprite2D" parent="Props/Radio" unique_id=312039245]
-scale = Vector2(0.0992, 0.0928)
-texture = ExtResource("2_y3yv0")
+position = Vector2(-6.000004, 3.0000286)
+scale = Vector2(0.1397042, 0.12602963)
+texture = ExtResource("3_vgosi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Props/Radio" unique_id=1851637060]
-position = Vector2(5.5, 11.5)
+position = Vector2(-7, 2.25)
 shape = SubResource("RectangleShape2D_vgosi")
 
 [node name="Dial" type="Node2D" parent="Props/Radio" unique_id=2138888130]

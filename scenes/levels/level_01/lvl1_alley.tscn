@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cg1hgn0d41vsd"]
 
-[ext_resource type="Script" uid="uid://lcko4tyuwji4" path="res://scenes/levels/level_01/lvl_1_alley.gd" id="1_385wb"]
+[ext_resource type="Script" path="res://scripts/levels/lvl_1_alley.gd" id="1_mm5f1"]
 [ext_resource type="Texture2D" uid="uid://df88nf350d3wf" path="res://assets/art/temp/callejon_temp.png" id="2_40c8t"]
 [ext_resource type="Texture2D" uid="uid://clcshn7r55ph5" path="res://assets/art/level_01/props/frame.png" id="3_xbc2m"]
 [ext_resource type="Texture2D" uid="uid://c4hixm2mk53a" path="res://assets/art/level_01/fragments/f1_family_photo.png" id="4_3ly35"]
@@ -18,7 +18,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d8isv"]
 
 [node name="Lvl1_alley" type="Node2D" unique_id=111540482]
-script = ExtResource("1_385wb")
+script = ExtResource("1_mm5f1")
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=2111414431]
 texture = ExtResource("2_40c8t")
