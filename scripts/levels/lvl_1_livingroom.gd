@@ -14,15 +14,14 @@ var f1_unlocked: bool = false
 const SCENE_NEXT = "res://scenes/levels/level_01/lvl1_kitchen_bedroom.tscn"
 
 func _ready() -> void:
-	$NavigationArrows.setup(
-	"",  # sin anterior porque es la primera escena
-    "res://scenes/levels/level_01/lvl1_kitchen_bedroom.tscn"
-)
+	$NavigationArrows.setup("", "")  # bloqueado hasta completar puzzle
 	await get_tree().process_frame
+	
 	silla.clicked.connect(_on_prop_placed.bind("silla"))
 	plato.clicked.connect(_on_prop_placed.bind("plato"))
 	radio.clicked.connect(_on_prop_placed.bind("radio"))
 	marco.clicked.connect(_on_prop_placed.bind("marco"))
+	
 	await _play_dialogue("start")
 
 func _on_prop_placed(prop_name: String) -> void:
@@ -40,7 +39,8 @@ func _complete_puzzle() -> void:
 
 func _unlock_f1() -> void:
 	f1_unlocked = true
-	marco.clicked.disconnect(_on_prop_placed)
+	if marco.clicked.is_connected(_on_prop_placed):
+		marco.clicked.disconnect(_on_prop_placed)
 	marco.clicked_after_placed.connect(_on_marco_clicked)
 	await _play_dialogue("f1_hint")
 
@@ -50,8 +50,11 @@ func _on_marco_clicked() -> void:
 	await _play_dialogue("f1_inspect")
 	FragmentManager.add_fragment("F1_foto_familiar")
 	await _play_dialogue("f1_close")
-	await get_tree().create_timer(2.0).timeout
-	_go_to_scene(SCENE_NEXT)
+	# Habilitar navegación ahora que el puzzle está completo
+	$NavigationArrows.setup(
+		"",
+		"res://scenes/levels/level_01/lvl1_kitchen_bedroom.tscn"
+	)
 
 func _play_dialogue(title: String) -> void:
 	var path = "res://data/dialogues/level_01/lvl1_livingroom.dialogue"
@@ -60,9 +63,6 @@ func _play_dialogue(title: String) -> void:
 		push_error("No se encontró: " + path)
 		return
 	dialogue_playing = true
-	var balloon = DialogueManager.show_example_dialogue_balloon(res, title)
+	var balloon = DialogueManager.show_dialogue_balloon(res, title)
 	await balloon.tree_exited
 	dialogue_playing = false
-
-func _go_to_scene(path: String) -> void:
-	get_tree().change_scene_to_file(path)
