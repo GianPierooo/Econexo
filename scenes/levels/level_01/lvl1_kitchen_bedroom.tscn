@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b87wejp4ycrqd" path="res://scripts/levels/lvl_1_kitchen_bedroom.gd" id="1_h5scf"]
 [ext_resource type="Texture2D" uid="uid://bkful3ceub3ax" path="res://assets/images/Escenas/escritorio_con_diario.png" id="2_h5scf"]
-[ext_resource type="PackedScene" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="4_lavwk"]
+[ext_resource type="PackedScene" uid="uid://hjm3s40ohvwl" path="res://scenes/ui_elements/inventory/NavigationArrows.tscn" id="4_lavwk"]
 
 [sub_resource type="SystemFont" id="SystemFont_h5scf"]
 

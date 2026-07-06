@@ -6,29 +6,29 @@
 [ext_resource type="Texture2D" uid="uid://dq80bgaeinrwa" path="res://icon.svg" id="4_60ykk"]
 [ext_resource type="Script" uid="uid://4gjlbypjgg7d" path="res://scripts/CableRenderer.gd" id="4_o6uul"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_uvyab"]
-radius = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pf2p"]
+size = Vector2(225, 97)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_60ykk"]
-radius = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6uul"]
+size = Vector2(220, 113)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_q8pcj"]
-radius = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvyab"]
+size = Vector2(213, 103)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_aa3we"]
-radius = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60ykk"]
+size = Vector2(212, 105)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pcsru"]
-radius = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8pcj"]
+size = Vector2(216, 109)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8thbj"]
-radius = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa3we"]
+size = Vector2(214, 109)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3pbu3"]
-radius = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcsru"]
+size = Vector2(214, 108)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8pf2p"]
-radius = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8thbj"]
+size = Vector2(204, 105)
 
 [node name="CablePuzzle" type="Node2D" unique_id=111540482]
 script = ExtResource("1_ei2bw")
@@ -47,7 +47,8 @@ color_id = "rojo"
 color = Color(0.2, 0.11372549, 0.11764706, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortA" unique_id=1945993902]
-shape = SubResource("CircleShape2D_uvyab")
+position = Vector2(-78.5, -9.5)
+shape = SubResource("RectangleShape2D_8pf2p")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortA" unique_id=1622577627]
 visible = false
@@ -60,7 +61,8 @@ color_id = "azul"
 color = Color(0.18039216, 0.17254902, 0.24705882, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortB" unique_id=1456538970]
-shape = SubResource("CircleShape2D_60ykk")
+position = Vector2(-89, 3.5)
+shape = SubResource("RectangleShape2D_o6uul")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortB" unique_id=1087056104]
 visible = false
@@ -73,7 +75,8 @@ color_id = "amarillo"
 color = Color(0.6111551, 0.5374029, 3.85046e-07, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortC" unique_id=285901549]
-shape = SubResource("CircleShape2D_q8pcj")
+position = Vector2(-96.5, 2.5)
+shape = SubResource("RectangleShape2D_uvyab")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortC" unique_id=1750347758]
 visible = false
@@ -86,7 +89,8 @@ color_id = "rosa"
 color = Color(0.16862746, 0.20392157, 0.14509805, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortLeft/PortD" unique_id=1677141168]
-shape = SubResource("CircleShape2D_aa3we")
+position = Vector2(-96, -0.5)
+shape = SubResource("RectangleShape2D_60ykk")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortLeft/PortD" unique_id=1675506289]
 visible = false
@@ -101,7 +105,8 @@ color_id = "rojo"
 is_left = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortRight/PortA" unique_id=813197835]
-shape = SubResource("CircleShape2D_pcsru")
+position = Vector2(63, -3.5)
+shape = SubResource("RectangleShape2D_q8pcj")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortRight/PortA" unique_id=1101885264]
 visible = false
@@ -115,7 +120,8 @@ is_left = false
 color = Color(0.42438066, 0.45858812, 1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortRight/PortB" unique_id=1645245879]
-shape = SubResource("CircleShape2D_8thbj")
+position = Vector2(58, -4.5)
+shape = SubResource("RectangleShape2D_aa3we")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortRight/PortB" unique_id=1956013743]
 visible = false
@@ -129,7 +135,8 @@ is_left = false
 color = Color(0.73337966, 0.469755, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortRight/PortC" unique_id=687026215]
-shape = SubResource("CircleShape2D_3pbu3")
+position = Vector2(56, 4)
+shape = SubResource("RectangleShape2D_pcsru")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortRight/PortC" unique_id=1849485285]
 visible = false
@@ -143,7 +150,8 @@ is_left = false
 color = Color(2.3102762e-06, 0.64185745, 0.29182857, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortRight/PortD" unique_id=560233550]
-shape = SubResource("CircleShape2D_8pf2p")
+position = Vector2(55, -0.5)
+shape = SubResource("RectangleShape2D_8thbj")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortRight/PortD" unique_id=1402382756]
 visible = false

@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://ugsim5qp3jjk"]
 
-[ext_resource type="Script" uid="uid://b87wejp4ycrqd" path="res://scripts/levels/lvl_1_kitchen_bedroom.gd" id="1_uxayy"]
 [ext_resource type="Texture2D" uid="uid://b2unmqr1vboaj" path="res://assets/images/Escenas/cuarto.png" id="2_13r16"]
 
-[node name="Lvl1_kitchen_bedroom" type="Node2D" unique_id=111540482]
-script = ExtResource("1_uxayy")
+[node name="Lvl1_bedroom" type="Node2D" unique_id=111540482]
 
 [node name="Backgruound" type="Sprite2D" parent="." unique_id=1823491064]
 scale = Vector2(0.9973959, 1.0037037)
